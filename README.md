@@ -1,83 +1,341 @@
-# charp_cnita
+<a name="readme-top"></a>
 
-# Question de compréhension
-
-1. À quoi sert une solution .sln ?
-   (https://learn.microsoft.com/fr-fr/visualstudio/extensibility/internals/solution-dot-sln-file?view=vs-2022)
-
-- Le .sln est un fichier qui contient des informations textuelles que l’environnement utilise pour rechercher et charger
-  les paramètres pour les données persistantes et le projet qu’il référence.
-
-2. À quoi sert un projet .csproj ? (https://filext.com/fr/extension-de-fichier/CSPROJ)
-
-- Un fichier CSPROJ est un projet d'application C# créé avec un environnement de développement
-- Il ne contient pas de code source C# réel,
-- il contient des données encodées XML telles que le schéma de données, les paramètres, les références au code source et
-  d'autres informations requises pour compiler un C# dans un exécutable Windows.
-
-3. Quelle commande permet de lancer un projet précis ?
-
-- dotnet run --project
-
-4. Pourquoi utilise-t-on une classe OutdoorEvent plutôt que plusieurs variables séparées comme
-   eventName1, eventDate1, eventLocation1 ?
-
-- Pour une structuration plus propre, au sein d'une même classe
-
-5. Expliquez avec vos mots la différence entre : string Name | string? Description
-
-- String sans le ?, défini que c'est un string obligatoire, pas nullable, contrairement a Description, ou il dois être a
-  string mais il est nullable
-
-6. Quel est l’avantage d’une List<OutdoorEvent> par rapport à plusieurs variables
-   indépendantes ?
-- Que toute les variables sont stocké dans une liste, qu'on peut boucler donc moins de code, et plus maintenanable car il est stocké dans une liste
-
-7. Expliquer oralement :
-   1. Qu’est-ce qu’une classe ?
-      - Une classe est une structuration essentiellement en POO, qui regroupe des methodes et des attributs
-   2. Qu’est-ce qu’une propriété ?
-      - Une propriété c'est une variable d'une class
-   3. Qu’est-ce qu’une méthode ?
-      - Une méthode c'est une fonction interne a une class 
-   4. Pourquoi C# demande-t-il des types explicites ?
-      - Comme a la java, pour l'optimisation, des types défini evite d'avir des erreur d'execution, etcc  
-   5. À quoi sert string? ?
-      - Il sert a avoir un string au contenu nullable, pas obligatoire
-   6. À quoi sert LINQ ?
-      - LINQ permet de faire des requetes sur des variables, comme en sql
-   7. Que contient le fichier .csproj ?
-      - Il contient le type de sortie, la version du dotnet, etc..
+![GitHub contributors](https://img.shields.io/github/contributors/raphaelmakaryan/charp_cnita?color=0d0&style=for-the-badge)
+![GitHub release](https://img.shields.io/github/v/release/raphaelmakaryan/charp_cnita?style=for-the-badge)
+![GitHub watchers](https://img.shields.io/github/watchers/raphaelmakaryan/charp_cnita?style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/raphaelmakaryan/charp_cnita?color=%23fa0&style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/raphaelmakaryan/charp_cnita?style=for-the-badge)
 
 
-8. Pourquoi déplacer OutdoorEvent hors du projet console ?
-- Pour séparé la console de la logique métier ?
+<br />
+<div align="center">
 
-9. Quelle partie du code serait réutilisable si demain on remplaçait la console par une API web
-- Les données, donc la collection ainsi que les fonctions
+<h3 align="center">OutdoorNotebook</h3>
 
-10. Mes choix :
-- avez-vous utilisé un constructeur ?
-  - oui
-- avez-vous utilisé des valeurs par défaut?
-  - pas dans la class mais une fonction qui le fais
-- où avez-vous mis la logique IsFull() ?
-  - oui
+  <p align="center">
+    Bienvenue sur le projet : OutdoorNotebook !
+    <br>
+Vous lisez actuellement la documentation, bonne lecture:)
+  </p>
+</div>
 
-11. Pourquoi tester la validation est-il plus intéressant que de tester simplement un affichage console
-    ?
-- Car il permet d'être sûr que ce qu'on souhaitait faire est conforme, afin de ne pas avoir de surprise tout au long du projet
+<details>
+  <summary>Tables des matieres :</summary>
+  <ol>
+    <li>
+      <a href="#le-projet">Le projet</a>
+      <a href="#prerequis">Prérequis</a>
+        <a href="#prerequis">Installation</a>
+        <a href="#prerequis">Compilation</a>
+        <a href="#prerequis">Tests</a>
+        <a href="#prerequis">Console</a>
+        <a href="#prerequis">API</a>
+        <a href="#prerequis">Exemples</a>
+        <a href="#prerequis">Structures</a>
+    </li>
+  </ol>
+</details>
 
-12. Expliquer : 
-    1. Pourquoi séparer console et cœur métier ?
-       - Afin de separer la logique et l'affichage, avoir une structure clair et propre
-    2. Qu’est-ce qu’un service métier ?
-        - Le service métier est la ou toute la logique passe
-    3. Pourquoi le service ne doit-il pas écrire dans la console ?
-       - Car on part du principe que le service s'occupe seulement de la logique, afin de laisser la console d'ecrire lui
-    4. Qu’est-ce qu’un test unitaire ?
-       - c'est un test qui vise a tester une fonction, une méthode précise isolé du reste
-    5. Qu’est-ce que la structure Arrange / Act / Assert?
-       - Arrange : récupération des données, Act : logique et condition, Assert : vérification
-    6. Qu’avez-vous trouvé difficile dans l’écriture des tests ?
-        - La mise en place et les questions posé pas clairement
+<br>
+
+---
+<br>
+
+
+# Le projet
+
+<br>
+
+OutdoorNotebook est un petit outil pour une association locale : Les Amis de l’Outdoor.
+
+L’association organise des sorties : randonnée, vélo, trail, ski de fond, etc.
+
+Elle veut un premier outil très simple pour suivre :
+- le nom des sorties,
+- leur date,
+- leur lieu,
+- leur nombre de places,
+- les participants inscrits,
+- éventuellement une courte description.
+
+<p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>
+
+# Prérequis
+
+<br>
+
+Pour utiliser OutdoorNotebook, vous devrez avoir .NET installé sur votre machine.
+
+<br>
+
+<p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>
+
+# Installation
+
+<br>
+
+Pour installer OutdoorNotebook, vous devrez téléchargez le code ou faites un clone Git :
+
+```bash
+git clone https://github.com/raphaelmakaryan/charp_cnita.git
+```
+
+Un dossier ainsi que tout le projet seras affiché sur votre machine.
+
+<br>
+
+<p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>
+
+# Compilation
+
+<br>
+
+Pour compiler OutdoorNotebook, vous devrez faire cet commande :
+
+```bash
+dotnet build
+```
+
+OutdoorNotebook se généreras.
+
+<br>
+
+<p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>
+
+# Tests
+
+<br>
+
+Pour lancer les tests de OutdoorNotebook, vous devrez faire cet commande :
+
+```bash
+dotnet test
+```
+
+Lest test de OutdoorNotebook se lanceras.
+
+<br>
+
+<p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>
+
+
+# Console
+
+<br>
+
+Pour lancer la console OutdoorNotebook, vous devrez faire cet commande :
+
+```bash
+dotnet run --project OutdoorNotebook.Console
+```
+
+OutdoorNotebook se lanceras avec une liste d'evenements préconfigurés.
+
+<br>
+
+<p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>
+
+# API
+
+<br>
+
+Pour lancer l'API de OutdoorNotebook, vous devrez faire cet commande :
+
+```bash
+dotnet run --project OutdoorNotebook.Api
+```
+
+Un serveur se lanceras avec une URL prédéfini dans votre console.
+
+Il y'a 3 routes actuellements disponible : 
+- /
+- /events
+- /events/upcoming
+
+<br>
+
+<p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>
+
+
+# Exemples
+
+<br>
+
+En quelque images, voici l'utilisation de OutdoorNotebook :
+
+<img src="./github/1.png">
+<img src="./github/2.png">
+
+<br>
+
+<p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>
+
+# Structure
+
+<br>
+
+Voici comment est structurer OutdoorNotebook : 
+
+``
+├── data/
+│   └── events.json
+├── OutdoorNotebook.Console/
+│   ├── Exercices/
+│   │   ├── Exercice1
+│   │   ├── Exercice2
+│   │   └── Exercice3
+│   └── Program.cs
+├── OutdoorNotebook.Core/
+│   ├── bin/
+│   │   └── Debug/
+│   │       └── net10.0/
+│   │           ├── OutdoorNotebook.Core.deps.json
+│   │           ├── OutdoorNotebook.Core.dll
+│   │           └── OutdoorNotebook.Core.pdb
+│   ├── obj/
+│   │   ├── Debug/
+│   │   │   └── net10.0/
+│   │   │       ├── ref/
+│   │   │       │   └── OutdoorNotebook.Core.dll
+│   │   │       ├── refint/
+│   │   │       │   └── OutdoorNotebook.Core.dll
+│   │   │       ├── .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
+│   │   │       ├── OutdoorNotebook.Core.AssemblyInfo.cs
+│   │   │       ├── OutdoorNotebook.Core.AssemblyInfoInputs.cache
+│   │   │       ├── OutdoorNotebook.Core.assets.cache
+│   │   │       ├── OutdoorNotebook.Core.csproj.CoreCompileInputs.cache
+│   │   │       ├── OutdoorNotebook.Core.csproj.FileListAbsolute.txt
+│   │   │       ├── OutdoorNotebook.Core.dll
+│   │   │       ├── OutdoorNotebook.Core.GeneratedMSBuildEditorConfig.editorconfig
+│   │   │       ├── OutdoorNotebook.Core.GlobalUsings.g.cs
+│   │   │       ├── OutdoorNotebook.Core.pdb
+│   │   │       └── OutdoorNotebook.Core.sourcelink.json
+│   │   ├── OutdoorNotebook.Core.csproj.nuget.dgspec.json
+│   │   ├── OutdoorNotebook.Core.csproj.nuget.g.props
+│   │   ├── OutdoorNotebook.Core.csproj.nuget.g.targets
+│   │   ├── project.assets.json
+│   │   ├── project.nuget.cache
+│   │   ├── project.packagespec.json
+│   │   ├── rider.project.model.nuget.info
+│   │   └── rider.project.restore.info
+│   ├── EventService.cs
+│   ├── EventStorageService.cs
+│   ├── OutdoorEvents.cs
+│   ├── OutdoorNotebook.Core.csproj
+│   └── Tools.cs
+├── OutdoorNotebook.Tests/
+│   ├── bin/
+│   │   └── Debug/
+│   │       └── net10.0/
+│   │           ├── cs/
+│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+│   │           ├── de/
+│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+│   │           ├── es/
+│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+│   │           ├── fr/
+│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+│   │           ├── it/
+│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+│   │           ├── ja/
+│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+│   │           ├── ko/
+│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+│   │           ├── pl/
+│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+│   │           ├── pt-BR/
+│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+│   │           ├── ru/
+│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+│   │           ├── tr/
+│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+│   │           ├── zh-Hans/
+│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+│   │           ├── zh-Hant/
+│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
+│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+│   │           ├── .msCoverageSourceRootsMapping_OutdoorNotebook.Tests
+│   │           ├── CoverletSourceRootsMapping_OutdoorNotebook.Tests
+│   │           ├── Microsoft.TestPlatform.CommunicationUtilities.dll
+│   │           ├── Microsoft.TestPlatform.CoreUtilities.dll
+│   │           ├── Microsoft.TestPlatform.CrossPlatEngine.dll
+│   │           ├── Microsoft.TestPlatform.PlatformAbstractions.dll
+│   │           ├── Microsoft.TestPlatform.Utilities.dll
+│   │           ├── Microsoft.VisualStudio.CodeCoverage.Shim.dll
+│   │           ├── Microsoft.VisualStudio.TestPlatform.Common.dll
+│   │           ├── Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+│   │           ├── Newtonsoft.Json.dll
+│   │           ├── OutdoorNotebook.Core.dll
+│   │           ├── OutdoorNotebook.Core.pdb
+│   │           ├── OutdoorNotebook.Tests.deps.json
+│   │           ├── OutdoorNotebook.Tests.dll
+│   │           ├── OutdoorNotebook.Tests.pdb
+│   │           ├── OutdoorNotebook.Tests.runtimeconfig.json
+│   │           ├── testhost.dll
+│   │           ├── xunit.abstractions.dll
+│   │           ├── xunit.assert.dll
+│   │           ├── xunit.core.dll
+│   │           ├── xunit.execution.dotnet.dll
+│   │           └── xunit.runner.visualstudio.testadapter.dll
+│   ├── OutdoorNotebook.Tests.csproj
+│   └── OutdoorNoteBookTests.cs
+├── OutdoorNotebook.slnx
+└── README.md
+``
+
+
+
+<br>
+
+<p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>

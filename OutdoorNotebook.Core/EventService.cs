@@ -85,4 +85,14 @@ public class EventService
 
         return result;
     }
+
+    public Collection<OutdoorEvents> apiEventsDefault()
+    {
+        return CreateDefaultData();
+    }
+
+    public Collection<OutdoorEvents> apiEventsUpcoming()
+    {
+        return upComingRelease(CreateDefaultData());
+    }
 }

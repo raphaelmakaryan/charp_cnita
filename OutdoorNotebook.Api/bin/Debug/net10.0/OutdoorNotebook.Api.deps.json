@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "OutdoorNotebook.Api/1.0.0": {
+        "dependencies": {
+          "OutdoorNotebook.Core": "1.0.0"
+        },
+        "runtime": {
+          "OutdoorNotebook.Api.dll": {}
+        }
+      },
+      "OutdoorNotebook.Core/1.0.0": {
+        "runtime": {
+          "OutdoorNotebook.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OutdoorNotebook.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OutdoorNotebook.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
