@@ -57,4 +57,37 @@ public class OutdoorNoteBookTests
 
         Assert.Equal(expectedCount, result.Count);
     }
+
+    [Fact]
+    public void verificationData_ShouldReturnOnlyGoodData()
+    {
+        Collection<OutdoorEvents> goodData = new Collection<OutdoorEvents>()
+        {
+            new OutdoorEvents("Randonnée au Parmelan", DateTime.Today.AddDays(-1), "Annecy", 12, 3, null),
+            new OutdoorEvents("Sortie vélo autour du lac", DateTime.Today.AddDays(+2), "Annecy", 8, 8, null),
+            new OutdoorEvents("Kayak", DateTime.Today.AddDays(+10), "Cran-Gevrier", 20, 5, null),
+            new OutdoorEvents("Jogging", DateTime.Today.AddDays(+1), "Annecy", 12, 12, null),
+            new OutdoorEvents("Canoe", DateTime.Today.AddDays(+5), "Annecy", 12, 0, null)
+        };
+
+        Collection<OutdoorEvents> badData = new Collection<OutdoorEvents>()
+        {
+            new OutdoorEvents("Randonnée au Parmelan", DateTime.Today.AddDays(-1), "Annecy", 12, 3, null),
+            new OutdoorEvents("Sortie vélo autour du lac", DateTime.Today.AddDays(+2), "", 8, 8, null),
+            new OutdoorEvents("Kayak", DateTime.Today.AddDays(+10), "Cran-Gevrier", -40, 5, null),
+            new OutdoorEvents("Jogging", DateTime.Today.AddDays(+1), "Annecy", 12, 12, null),
+            new OutdoorEvents("", DateTime.Today.AddDays(+5), "Annecy", 12, 0, null)
+        };
+        EventService eventService = new EventService();
+        Collection<OutdoorEvents> allEvents = eventService.CreateDefaultData();
+
+        /*
+        bool isValid = eventService.verificationEvent(goodData);
+        Assert.True(isValid);
+        bool isInvalid = eventService.verificationEvent(badData);
+        Assert.False(isInvalid);
+        */
+        bool isValid = eventService.verificationEvent(allEvents);
+        Assert.True(isValid);
+    }
 }

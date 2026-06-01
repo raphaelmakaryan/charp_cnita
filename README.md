@@ -63,3 +63,7 @@
   - pas dans la class mais une fonction qui le fais
 - où avez-vous mis la logique IsFull() ?
   - oui
+
+11. Pourquoi tester la validation est-il plus intéressant que de tester simplement un affichage console
+    ?
+- Car il permet d'être sûr que ce qu'on souhaitait faire est conforme, afin de ne pas avoir de surprise tout au long du projet
