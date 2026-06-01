@@ -1,0 +1,14 @@
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/bin/Debug/net10.0/OutdoorNotebook.Console
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/bin/Debug/net10.0/OutdoorNotebook.Console.deps.json
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/bin/Debug/net10.0/OutdoorNotebook.Console.runtimeconfig.json
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/bin/Debug/net10.0/OutdoorNotebook.Console.dll
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/bin/Debug/net10.0/OutdoorNotebook.Console.pdb
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorNotebook.Console.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorNotebook.Console.AssemblyInfoInputs.cache
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorNotebook.Console.AssemblyInfo.cs
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorNotebook.Console.csproj.CoreCompileInputs.cache
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorNotebook.Console.dll
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/refint/OutdoorNotebook.Console.dll
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorNotebook.Console.pdb
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorNotebook.Console.genruntimeconfig.cache
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/ref/OutdoorNotebook.Console.dll
