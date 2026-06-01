@@ -32,3 +32,19 @@
 6. Quel est l’avantage d’une List<OutdoorEvent> par rapport à plusieurs variables
    indépendantes ?
 - Que toute les variables sont stocké dans une liste, qu'on peut boucler donc moins de code, et plus maintenanable car il est stocké dans une liste
+
+7. Expliquer oralement :
+   1. Qu’est-ce qu’une classe ?
+      - Une classe est une structuration essentiellement en POO, qui regroupe des methodes et des attributs
+   2. Qu’est-ce qu’une propriété ?
+      - Une propriété c'est une variable d'une class
+   3. Qu’est-ce qu’une méthode ?
+      - Une méthode c'est une fonction interne a une class 
+   4. Pourquoi C# demande-t-il des types explicites ?
+      - Comme a la java, pour l'optimisation, des types défini evite d'avir des erreur d'execution, etcc  
+   5. À quoi sert string? ?
+      - Il sert a avoir un string au contenu nullable, pas obligatoire
+   6. À quoi sert LINQ ?
+      - LINQ permet de faire des requetes sur des variables, comme en sql
+   7. Que contient le fichier .csproj ?
+      - Il contient le type de sortie, la version du dotnet, etc..
