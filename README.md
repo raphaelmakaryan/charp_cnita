@@ -24,15 +24,32 @@ Vous lisez actuellement la documentation, bonne lecture :)
   <ol>
     <li>
         <a href="#le-projet">Le projet</a>
+</li>
+<li>
         <a href="#prerequis">Prérequis</a>
+</li>
+<li>
         <a href="#installation">Installation</a>
+</li>
+<li>
         <a href="#compilation">Compilation</a>
+</li>
+<li>
         <a href="#tests">Tests</a>
+</li>
+<li>
         <a href="#console">Console</a>
+</li>
+<li>
         <a href="#api">API</a>
+</li>
+<li>
         <a href="#exemples">Exemples</a>
+</li>
+<li>
         <a href="#structures">Structures</a>
-    </li>
+</li>
+
   </ol>
 </details>
 
@@ -168,6 +185,8 @@ En quelques images, voici l'utilisation de OutdoorNotebook :
 <br>
 
 <p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>
+
+<br>
 
 # Structures
 
