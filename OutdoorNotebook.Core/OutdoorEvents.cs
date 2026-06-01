@@ -45,6 +45,7 @@ public class OutdoorEvents
         _lieu = lieu;
         _maxParticipants = maxParticipants;
         _participantsActual = participantsActual;
+        _description = description;
     }
 
     public string Name1
@@ -88,11 +89,6 @@ public class OutdoorEvents
      */
     public string DisplayData(OutdoorEvents outdoorEvents)
     {
-        if (outdoorEvents._description == null)
-        {
-            outdoorEvents.Description1 = "Aucune description";
-        }
-
         return "- " + outdoorEvents.Name1 + " — " + outdoorEvents.Lieu1 + " — " + outdoorEvents.Date1 + " — " +
                outdoorEvents.ParticipantsActual1 + "/" + outdoorEvents.MaxParticipants1 + " participants  — " +
                outdoorEvents.GetRemainingPlaces(outdoorEvents.ParticipantsActual1, outdoorEvents.MaxParticipants1) +

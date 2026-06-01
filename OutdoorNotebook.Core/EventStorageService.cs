@@ -28,11 +28,15 @@ public class EventStorageService
 
         foreach (var events in allData.EnumerateArray())
         {
-            allEvents.Add(new OutdoorEvents(events.GetProperty("Name").ToString(),
-                DateTime.Parse(events.GetProperty("Date").ToString()), events.GetProperty("Lieu").ToString(),
+            string dateString = events.GetProperty("Date").GetString() ?? DateTime.Today.ToString();
+            DateTime date = DateTime.TryParse(dateString, out DateTime parsedDate)
+                ? parsedDate
+                : DateTime.MinValue;
+            allEvents.Add(new OutdoorEvents(events.GetProperty("Name").GetString() ?? "Pas de nom",
+                date, events.GetProperty("Lieu").GetString() ?? "Pas de liey",
                 events.GetProperty("MaxParticipants").GetInt32(),
                 events.GetProperty("ParticipantsActual").GetInt32(),
-                events.GetProperty("Description").ToString()));
+                events.GetProperty("Description").GetString() ?? "Aucune description"));
         }
 
         return allEvents;

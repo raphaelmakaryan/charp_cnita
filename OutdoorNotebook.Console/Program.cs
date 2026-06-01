@@ -10,6 +10,12 @@ Tools tools = new Tools();
 EventStorageService eventStorageService = new EventStorageService();
 Collection<OutdoorEvents> data = eventStorageService.LoadJson();
 
+foreach (var events in data)
+{
+    Console.WriteLine(events.DisplayData(events));
+}
+
+Console.WriteLine(tools.separation());
 foreach (var outdoorEventse in eventService.upComingRelease(data))
 {
     Console.WriteLine(outdoorEventse.DisplayData(outdoorEventse));
@@ -17,12 +23,6 @@ foreach (var outdoorEventse in eventService.upComingRelease(data))
 
 Console.WriteLine(tools.separation());
 foreach (var outdoorEventse in eventService.fullReleases(data))
-{
-    Console.WriteLine(outdoorEventse.DisplayData(outdoorEventse));
-}
-
-Console.WriteLine(tools.separation());
-foreach (var outdoorEventse in eventService.releasesStillAvailable(data))
 {
     Console.WriteLine(outdoorEventse.DisplayData(outdoorEventse));
 }
