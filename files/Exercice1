@@ -93,7 +93,7 @@ Console.WriteLine(tools.separation());
  * - qui s'appelle "sortieTrié"
  * - on appelle la collection de allEvents auquel on va triéPar
  * - on défini la variable events
- * - qui va prendre le tri par rapport a la datz
+ * - qui va prendre le tri par rapport a la date
 /*
 IEnumerable<OutdoorEvents> sortieTrié = allEvents.OrderBy(events => events.Date1);
 foreach (var events in sortieTrié)

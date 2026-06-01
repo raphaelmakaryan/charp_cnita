@@ -1,38 +1,21 @@
-using System.Collections.ObjectModel;
-
-namespace OutdoorNotebook.Console.Models;
+namespace OutdoorNotebook.Core;
 
 public class OutdoorEvents
 {
     /**
-     * Nom de l'event
+     * Nom des événements
      */
     private string _name;
 
     /**
-     * Date de l'event
-     */
-    private DateTime _date;
-
-    /**
-     * Lieu de l'event
+     * Lieu des événements
      */
     private string _lieu;
 
     /**
-     * Nombre max de participants
+     * Description des événements, nullable
      */
-    private int _maxParticipants;
-
-    /**
-     * Nombre actuel de participants
-     */
-    private int _participantsActual;
-
-    /**
-     * Description de l'event, nullable
-     */
-    private string? _description = null;
+    private readonly string? _description;
 
     /**
      * Constructeur d'un event
@@ -41,10 +24,10 @@ public class OutdoorEvents
         string? description)
     {
         _name = name;
-        _date = date;
+        Date1 = date;
         _lieu = lieu;
-        _maxParticipants = maxParticipants;
-        _participantsActual = participantsActual;
+        MaxParticipants1 = maxParticipants;
+        ParticipantsActual1 = participantsActual;
         _description = description;
     }
 
@@ -54,11 +37,10 @@ public class OutdoorEvents
         set => _name = value ?? throw new ArgumentNullException(nameof(value));
     }
 
-    public DateTime Date1
-    {
-        get => _date;
-        set => _date = value;
-    }
+    /**
+     * Date des événements
+     */
+    public DateTime Date1 { get; set; }
 
     public string Lieu1
     {
@@ -66,23 +48,15 @@ public class OutdoorEvents
         set => _lieu = value ?? throw new ArgumentNullException(nameof(value));
     }
 
-    public int MaxParticipants1
-    {
-        get => _maxParticipants;
-        set => _maxParticipants = value;
-    }
+    /**
+     * Nombre max de participants
+     */
+    public int MaxParticipants1 { get; set; }
 
-    public int ParticipantsActual1
-    {
-        get => _participantsActual;
-        set => _participantsActual = value;
-    }
-
-    public string? Description1
-    {
-        get => _description;
-        set => _description = value ?? throw new ArgumentNullException(nameof(value));
-    }
+    /**
+     * Nombre actuel de participants
+     */
+    public int ParticipantsActual1 { get; set; }
 
     /**
      * Fonction pour retourner en propre les valeurs
@@ -101,7 +75,7 @@ public class OutdoorEvents
     /**
      * Fonction pour retourner le nombre de places manquantes
      */
-    public int GetRemainingPlaces(int placeActuel, int placeMax)
+    private int GetRemainingPlaces(int placeActuel, int placeMax)
     {
         return placeMax - placeActuel;
     }

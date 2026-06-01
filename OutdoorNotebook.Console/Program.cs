@@ -1,8 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using OutdoorNotebook.Console.Models;
 using System.Collections.ObjectModel;
-using System.Text.Json;
+using OutdoorNotebook.Core;
 
 EventService eventService = new EventService();
 Tools tools = new Tools();
@@ -15,16 +14,16 @@ foreach (var events in data)
     Console.WriteLine(events.DisplayData(events));
 }
 
-Console.WriteLine(tools.separation());
-foreach (var outdoorEventse in eventService.upComingRelease(data))
+Console.WriteLine(Tools.Separation());
+foreach (var outdoorEvents in eventService.UpComingRelease(data))
 {
-    Console.WriteLine(outdoorEventse.DisplayData(outdoorEventse));
+    Console.WriteLine(outdoorEvents.DisplayData(outdoorEvents));
 }
 
-Console.WriteLine(tools.separation());
-foreach (var outdoorEventse in eventService.fullReleases(data))
+Console.WriteLine(Tools.Separation());
+foreach (var outdoorEvents in eventService.FullReleases(data))
 {
-    Console.WriteLine(outdoorEventse.DisplayData(outdoorEventse));
+    Console.WriteLine(outdoorEvents.DisplayData(outdoorEvents));
 }
 
-Console.WriteLine(tools.separation());
+Console.WriteLine(Tools.Separation());

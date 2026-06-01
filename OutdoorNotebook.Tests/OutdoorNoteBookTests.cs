@@ -1,5 +1,5 @@
 ﻿using System.Collections.ObjectModel;
-using OutdoorNotebook.Console.Models;
+using OutdoorNotebook.Core;
 
 namespace OutdoorNotebook.Tests;
 
@@ -12,7 +12,7 @@ public class OutdoorNoteBookTests
         EventService eventService = new EventService();
         Collection<OutdoorEvents> allEvents = eventService.CreateDefaultData();
         int expectedCount = allEvents.Count(e => e.Date1 >= DateTime.Today);
-        var result = eventService.upComingRelease(allEvents);
+        var result = eventService.UpComingRelease(allEvents);
         // Act
         foreach (var outdoorEvents in result)
         {
@@ -29,7 +29,7 @@ public class OutdoorNoteBookTests
         EventService eventService = new EventService();
         Collection<OutdoorEvents> allEvents = eventService.CreateDefaultData();
         int expectedCount = allEvents.Count(e => e.IsFull(e.ParticipantsActual1, e.MaxParticipants1));
-        var result = eventService.fullReleases(allEvents);
+        var result = eventService.FullReleases(allEvents);
         foreach (var outdoorEvents in result)
         {
             Assert.True(outdoorEvents.IsFull(outdoorEvents.ParticipantsActual1, outdoorEvents.MaxParticipants1),
@@ -46,7 +46,7 @@ public class OutdoorNoteBookTests
         Collection<OutdoorEvents> allEvents = eventService.CreateDefaultData();
         int expectedCount = allEvents.Count(e =>
             !e.IsFull(e.ParticipantsActual1, e.MaxParticipants1) && e.Date1 >= DateTime.Today);
-        var result = eventService.releasesStillAvailable(allEvents);
+        var result = eventService.ReleasesStillAvailable(allEvents);
         foreach (var outdoorEvents in result)
         {
             Assert.False(
@@ -61,23 +61,23 @@ public class OutdoorNoteBookTests
     [Fact]
     public void verificationData_ShouldReturnOnlyGoodData()
     {
-        Collection<OutdoorEvents> goodData = new Collection<OutdoorEvents>()
-        {
+        Collection<OutdoorEvents> goodData =
+        [
             new OutdoorEvents("Randonnée au Parmelan", DateTime.Today.AddDays(-1), "Annecy", 12, 3, null),
             new OutdoorEvents("Sortie vélo autour du lac", DateTime.Today.AddDays(+2), "Annecy", 8, 8, null),
             new OutdoorEvents("Kayak", DateTime.Today.AddDays(+10), "Cran-Gevrier", 20, 5, null),
             new OutdoorEvents("Jogging", DateTime.Today.AddDays(+1), "Annecy", 12, 12, null),
             new OutdoorEvents("Canoe", DateTime.Today.AddDays(+5), "Annecy", 12, 0, null)
-        };
+        ];
 
-        Collection<OutdoorEvents> badData = new Collection<OutdoorEvents>()
-        {
+        Collection<OutdoorEvents> badData =
+        [
             new OutdoorEvents("Randonnée au Parmelan", DateTime.Today.AddDays(-1), "Annecy", 12, 3, null),
             new OutdoorEvents("Sortie vélo autour du lac", DateTime.Today.AddDays(+2), "", 8, 8, null),
             new OutdoorEvents("Kayak", DateTime.Today.AddDays(+10), "Cran-Gevrier", -40, 5, null),
             new OutdoorEvents("Jogging", DateTime.Today.AddDays(+1), "Annecy", 12, 12, null),
             new OutdoorEvents("", DateTime.Today.AddDays(+5), "Annecy", 12, 0, null)
-        };
+        ];
         EventService eventService = new EventService();
         Collection<OutdoorEvents> allEvents = eventService.CreateDefaultData();
 
@@ -87,7 +87,7 @@ public class OutdoorNoteBookTests
         bool isInvalid = eventService.verificationEvent(badData);
         Assert.False(isInvalid);
         */
-        bool isValid = eventService.verificationEvent(allEvents);
+        bool isValid = eventService.VerificationEvent(allEvents);
         Assert.True(isValid);
     }
 }

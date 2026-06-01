@@ -1,8 +1,8 @@
-namespace OutdoorNotebook.Console.Models;
+namespace OutdoorNotebook.Core;
 
 public class Tools
 {
-    public string separation()
+    public static string Separation()
     {
         return "--------------------------------------";
     }

@@ -85,3 +85,8 @@
 
 13. Quelle différence faites-vous entre : dotnet run --project OutdoorNotebook.Console | dotnet run --project OutdoorNotebook.Api ?
 - La console, c'est l'application en elle même, tandis que l'api, c'est le lancement d'un serveur
+
+
+14. Qu’avez-vous compris de spécifique à C# et .NET que vous ne voyiez pas forcément
+    dans les autres langages ?
+- Ce qui est spécifique à C# et .NET, il y'a LINQ, de faire des requêtes directement dans le code C#, 
