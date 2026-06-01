@@ -39,11 +39,14 @@ public class EventStorageService
             DateTime date = DateTime.TryParse(dateString, out DateTime parsedDate)
                 ? parsedDate
                 : DateTime.MinValue;
+            EventsDifficulty difficulty = (EventsDifficulty)Enum.Parse(typeof(EventsDifficulty),
+                events.GetProperty("Difficulty").GetString());
             allEvents.Add(new OutdoorEvents(events.GetProperty("Name").GetString() ?? "Pas de nom",
                 date, events.GetProperty("Lieu").GetString() ?? "Pas de liey",
                 events.GetProperty("MaxParticipants").GetInt32(),
                 events.GetProperty("ParticipantsActual").GetInt32(),
-                events.GetProperty("Description").GetString() ?? "Aucune description"));
+                events.GetProperty("Description").GetString() ?? "Aucune description", difficulty
+            ));
         }
 
         return allEvents;

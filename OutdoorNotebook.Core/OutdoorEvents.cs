@@ -17,11 +17,13 @@ public class OutdoorEvents
      */
     private readonly string? _description;
 
+    private EventsDifficulty _difficulty;
+
     /**
      * Constructeur d'un event
      */
     public OutdoorEvents(string name, DateTime date, string lieu, int maxParticipants, int participantsActual,
-        string? description)
+        string? description, EventsDifficulty difficulty)
     {
         _name = name;
         Date1 = date;
@@ -29,6 +31,7 @@ public class OutdoorEvents
         MaxParticipants1 = maxParticipants;
         ParticipantsActual1 = participantsActual;
         _description = description;
+        _difficulty = difficulty;
     }
 
     public string Name1
@@ -46,6 +49,12 @@ public class OutdoorEvents
     {
         get => _lieu;
         set => _lieu = value ?? throw new ArgumentNullException(nameof(value));
+    }
+
+    public EventsDifficulty Difficulty
+    {
+        get => _difficulty;
+        set => _difficulty = value;
     }
 
     /**
@@ -68,7 +77,7 @@ public class OutdoorEvents
                outdoorEvents.GetRemainingPlaces(outdoorEvents.ParticipantsActual1, outdoorEvents.MaxParticipants1) +
                " places restantes — " +
                outdoorEvents.IsFull(outdoorEvents.ParticipantsActual1, outdoorEvents.MaxParticipants1) + " — " +
-               outdoorEvents._description;
+               outdoorEvents._description + " — Difficulté : " + outdoorEvents._difficulty;
     }
 
 
