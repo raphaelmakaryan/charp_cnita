@@ -2,9 +2,9 @@
 
 using OutdoorNotebook.Console.Models;
 
-//Console.WriteLine("Hello, World!");
+/**
+ * EXERCICE DE 1 A 1.7
 
-/*
 // Variable pour temps, je prend la date d'aujourd'hui, et je fais -1
 DateTime dateTimeSortiePasse = DateTime.Today.AddDays(-1);
 // je declare un event avec les parametres
@@ -29,6 +29,9 @@ OutdoorEvents sortieDispo = new OutdoorEvents("Canoe", dateTimeSortieDispo, "Ann
 Console.WriteLine(sortieDispo.DisplayData(sortieDispo));
 */
 
+/**
+ * EXERCICE 1.7
+
 var events = new List<OutdoorEvents>(new OutdoorEvents[]
 {
     new OutdoorEvents("Randonnée au Parmelan", DateTime.Today.AddDays(-1), "Annecy", 12, 3, null),
@@ -41,4 +44,58 @@ var events = new List<OutdoorEvents>(new OutdoorEvents[]
 foreach (var outdoorEventse in events)
 {
     Console.WriteLine(outdoorEventse.DisplayData(outdoorEventse));
+}
+*/
+
+/**
+ * Exercice 1.8
+ */
+
+
+var allEvents = new OutdoorEvents[]
+{
+    new OutdoorEvents("Randonnée au Parmelan", DateTime.Today.AddDays(-1), "Annecy", 12, 3, null),
+    new OutdoorEvents("Sortie vélo autour du lac", DateTime.Today.AddDays(+2), "Annecy", 8, 8, null),
+    new OutdoorEvents("Kayak", DateTime.Today.AddDays(+10), "Cran-Gevrier", 20, 5, null),
+    new OutdoorEvents("Jogging", DateTime.Today.AddDays(+1), "Annecy", 12, 12, null),
+    new OutdoorEvents("Canoe", DateTime.Today.AddDays(+5), "Annecy", 12, 0, "")
+};
+
+/**
+ * Besoin 1
+ */
+var sortieAVenir = from events in allEvents where events.Date1 >= DateTime.Today select events;
+foreach (var events in sortieAVenir)
+{
+    //Console.WriteLine(events.DisplayData(events));
+}
+
+
+/**
+ * Besoin 2
+ */
+var sortieComplete = from events in allEvents
+    where events.IsFull(events.ParticipantsActual1, events.MaxParticipants1)
+    select events;
+foreach (var events in sortieComplete)
+{
+    //Console.WriteLine(events.DisplayData(events));
+}
+
+/**
+ * Besoin 3
+ */
+
+/**
+ * - Je crée une "requete"
+ * - qui va enuméré OutdoorEvents
+ * - qui s'appelle "sortieTrié"
+ * - on appelle la collection de allEvents auquel on va triéPar
+ * - on défini la variable events
+ * - qui va prendre le tri par rapport a la datz
+ */
+IEnumerable<OutdoorEvents> sortieTrié = allEvents.OrderBy(events => events.Date1);
+foreach (var events in sortieTrié)
+{
+    Console.WriteLine(events.DisplayData(events));
 }
