@@ -28,3 +28,7 @@
 
 - String sans le ?, défini que c'est un string obligatoire, pas nullable, contrairement a Description, ou il dois être a
   string mais il est nullable
+
+6. Quel est l’avantage d’une List<OutdoorEvent> par rapport à plusieurs variables
+   indépendantes ?
+- Que toute les variables sont stocké dans une liste, qu'on peut boucler donc moins de code, et plus maintenanable car il est stocké dans une liste
