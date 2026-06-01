@@ -67,3 +67,17 @@
 11. Pourquoi tester la validation est-il plus intéressant que de tester simplement un affichage console
     ?
 - Car il permet d'être sûr que ce qu'on souhaitait faire est conforme, afin de ne pas avoir de surprise tout au long du projet
+
+12. Expliquer : 
+    1. Pourquoi séparer console et cœur métier ?
+       - Afin de separer la logique et l'affichage, avoir une structure clair et propre
+    2. Qu’est-ce qu’un service métier ?
+        - Le service métier est la ou toute la logique passe
+    3. Pourquoi le service ne doit-il pas écrire dans la console ?
+       - Car on part du principe que le service s'occupe seulement de la logique, afin de laisser la console d'ecrire lui
+    4. Qu’est-ce qu’un test unitaire ?
+       - c'est un test qui vise a tester une fonction, une méthode précise isolé du reste
+    5. Qu’est-ce que la structure Arrange / Act / Assert?
+       - Arrange : récupération des données, Act : logique et condition, Assert : vérification
+    6. Qu’avez-vous trouvé difficile dans l’écriture des tests ?
+        - La mise en place et les questions posé pas clairement
