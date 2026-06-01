@@ -1,0 +1,36 @@
+{
+  "events": [
+    {
+      "Name": "Randonnée au Parmelan",
+      "Date": "03-06-2026",
+      "Lieu": "Annecy",
+      "MaxParticipants": 12,
+      "ParticipantsActual": 3,
+      "Description": null
+    },
+    {
+      "Name": "Kayak",
+      "Date": "02-06-2026",
+      "Lieu": "Annecy",
+      "MaxParticipants": 20,
+      "ParticipantsActual": 5,
+      "Description": null
+    },
+    {
+      "Name": "Sortie vélo autour du lac",
+      "Date": "03-10-2026",
+      "Lieu": "Annecy",
+      "MaxParticipants": 10,
+      "ParticipantsActual": 10,
+      "Description": null
+    },
+    {
+      "Name": "Jogging",
+      "Date": "06-01-2026",
+      "Lieu": "Annecy",
+      "MaxParticipants": 12,
+      "ParticipantsActual": 2,
+      "Description": "Petite sortie tranquille"
+    }
+  ]
+}

@@ -2,32 +2,27 @@
 
 using OutdoorNotebook.Console.Models;
 using System.Collections.ObjectModel;
-
-Tools tools = new Tools();
+using System.Text.Json;
 
 EventService eventService = new EventService();
-Collection<OutdoorEvents> allEvents = new Collection<OutdoorEvents>()
-{
-    new OutdoorEvents("Randonnée au Parmelan", DateTime.Today.AddDays(-1), "Annecy", 12, 3, null),
-    new OutdoorEvents("Sortie vélo autour du lac", DateTime.Today.AddDays(+2), "Annecy", 8, 8, null),
-    new OutdoorEvents("Kayak", DateTime.Today.AddDays(+10), "Cran-Gevrier", 20, 5, null),
-    new OutdoorEvents("Jogging", DateTime.Today.AddDays(+1), "Annecy", 12, 12, null),
-    new OutdoorEvents("Canoe", DateTime.Today.AddDays(+5), "Annecy", 12, 0, "")
-};
-foreach (var outdoorEventse in eventService.upComingRelease(allEvents))
+Tools tools = new Tools();
+
+EventStorageService eventStorageService = new EventStorageService();
+Collection<OutdoorEvents> data = eventStorageService.LoadJson();
+
+foreach (var outdoorEventse in eventService.upComingRelease(data))
 {
     Console.WriteLine(outdoorEventse.DisplayData(outdoorEventse));
 }
 
 Console.WriteLine(tools.separation());
-foreach (var outdoorEventse in eventService.fullReleases(allEvents))
+foreach (var outdoorEventse in eventService.fullReleases(data))
 {
     Console.WriteLine(outdoorEventse.DisplayData(outdoorEventse));
 }
 
 Console.WriteLine(tools.separation());
-
-foreach (var outdoorEventse in eventService.releasesStillAvailable(allEvents))
+foreach (var outdoorEventse in eventService.releasesStillAvailable(data))
 {
     Console.WriteLine(outdoorEventse.DisplayData(outdoorEventse));
 }
