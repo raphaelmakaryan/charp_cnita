@@ -13,3 +13,7 @@
 /home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorNotebook.Console.genruntimeconfig.cache
 /home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/ref/OutdoorNotebook.Console.dll
 /home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorNotebook.Console.sourcelink.json
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/bin/Debug/net10.0/OutdoorNotebook.Core.dll
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/bin/Debug/net10.0/OutdoorNotebook.Core.pdb
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorNotebook.Console.csproj.AssemblyReference.cache
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorN.DD416A8E.Up2Date

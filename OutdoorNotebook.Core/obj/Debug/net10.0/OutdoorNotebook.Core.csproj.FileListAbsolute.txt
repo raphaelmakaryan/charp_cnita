@@ -1,0 +1,12 @@
+/home/user/Documents/COURS/C#/OutdoorNotebook.Core/bin/Debug/net10.0/OutdoorNotebook.Core.deps.json
+/home/user/Documents/COURS/C#/OutdoorNotebook.Core/bin/Debug/net10.0/OutdoorNotebook.Core.dll
+/home/user/Documents/COURS/C#/OutdoorNotebook.Core/bin/Debug/net10.0/OutdoorNotebook.Core.pdb
+/home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/Debug/net10.0/OutdoorNotebook.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/Debug/net10.0/OutdoorNotebook.Core.AssemblyInfoInputs.cache
+/home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/Debug/net10.0/OutdoorNotebook.Core.AssemblyInfo.cs
+/home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/Debug/net10.0/OutdoorNotebook.Core.csproj.CoreCompileInputs.cache
+/home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/Debug/net10.0/OutdoorNotebook.Core.sourcelink.json
+/home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/Debug/net10.0/OutdoorNotebook.Core.dll
+/home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/Debug/net10.0/refint/OutdoorNotebook.Core.dll
+/home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/Debug/net10.0/OutdoorNotebook.Core.pdb
+/home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/Debug/net10.0/ref/OutdoorNotebook.Core.dll

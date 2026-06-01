@@ -48,3 +48,10 @@
       - LINQ permet de faire des requetes sur des variables, comme en sql
    7. Que contient le fichier .csproj ?
       - Il contient le type de sortie, la version du dotnet, etc..
+
+
+8. Pourquoi déplacer OutdoorEvent hors du projet console ?
+- Pour séparé la console de la logique métier ?
+
+9. Quelle partie du code serait réutilisable si demain on remplaçait la console par une API web
+- Les données, donc la collection ainsi que les fonctions

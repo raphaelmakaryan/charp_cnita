@@ -1,10 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using OutdoorNotebook.Console.Models;
-using System.Collections.ObjectModel;
-
-Tools tools = new Tools();
-
+/**
+ * EXERCICE 2
+*/
 EventService eventService = new EventService();
 Collection<OutdoorEvents> allEvents = new Collection<OutdoorEvents>()
 {

@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {
-      "OutdoorNotebook.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "compile": {
-          "bin/placeholder/OutdoorNotebook.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OutdoorNotebook.Core.dll": {}
-        }
-      }
-    }
+    "net10.0": {}
   },
-  "libraries": {
-    "OutdoorNotebook.Core/1.0.0": {
-      "type": "project",
-      "path": "../OutdoorNotebook.Core/OutdoorNotebook.Core.csproj",
-      "msbuildProject": "../OutdoorNotebook.Core/OutdoorNotebook.Core.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net10.0": [
-      "OutdoorNotebook.Core >= 1.0.0"
-    ]
+    "net10.0": []
   },
   "packageFolders": {
     "/home/user/.nuget/packages/": {}
@@ -32,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/user/Documents/COURS/C#/OutdoorNotebook.Console/OutdoorNotebook.Console.csproj",
-      "projectName": "OutdoorNotebook.Console",
-      "projectPath": "/home/user/Documents/COURS/C#/OutdoorNotebook.Console/OutdoorNotebook.Console.csproj",
+      "projectUniqueName": "/home/user/Documents/COURS/C#/OutdoorNotebook.Core/OutdoorNotebook.Core.csproj",
+      "projectName": "OutdoorNotebook.Core",
+      "projectPath": "/home/user/Documents/COURS/C#/OutdoorNotebook.Core/OutdoorNotebook.Core.csproj",
       "packagesPath": "/home/user/.nuget/packages/",
-      "outputPath": "/home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/",
+      "outputPath": "/home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/user/.nuget/NuGet/NuGet.Config"
@@ -51,11 +32,7 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {
-            "/home/user/Documents/COURS/C#/OutdoorNotebook.Core/OutdoorNotebook.Core.csproj": {
-              "projectPath": "/home/user/Documents/COURS/C#/OutdoorNotebook.Core/OutdoorNotebook.Core.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
