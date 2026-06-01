@@ -55,3 +55,11 @@
 
 9. Quelle partie du code serait réutilisable si demain on remplaçait la console par une API web
 - Les données, donc la collection ainsi que les fonctions
+
+10. Mes choix :
+- avez-vous utilisé un constructeur ?
+  - oui
+- avez-vous utilisé des valeurs par défaut?
+  - pas dans la class mais une fonction qui le fais
+- où avez-vous mis la logique IsFull() ?
+  - oui
