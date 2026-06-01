@@ -26,6 +26,7 @@ foreach (var outdoorEventse in eventService.fullReleases(allEvents))
 }
 
 Console.WriteLine(tools.separation());
+
 foreach (var outdoorEventse in eventService.releasesStillAvailable(allEvents))
 {
     Console.WriteLine(outdoorEventse.DisplayData(outdoorEventse));

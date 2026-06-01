@@ -1,3 +1,5 @@
+using System.Collections.ObjectModel;
+
 namespace OutdoorNotebook.Console.Models;
 
 public class OutdoorEvents
