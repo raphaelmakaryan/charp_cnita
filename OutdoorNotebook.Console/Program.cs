@@ -5,8 +5,11 @@ using OutdoorNotebook.Console.Models;
 //Console.WriteLine("Hello, World!");
 
 /*
+// Variable pour temps, je prend la date d'aujourd'hui, et je fais -1
 DateTime dateTimeSortiePasse = DateTime.Today.AddDays(-1);
+// je declare un event avec les parametres
 OutdoorEvents sortiePasse = new OutdoorEvents("Randonnée au Parmelan", dateTimeSortiePasse, "Annecy", 12, 3, null);
+// j'affiche dans la console
 Console.WriteLine(sortiePasse.DisplayData(sortiePasse));
 
 DateTime dateTimeSortieFutur1 = DateTime.Today.AddDays(+2);

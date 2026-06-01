@@ -2,78 +2,115 @@ namespace OutdoorNotebook.Console.Models;
 
 public class OutdoorEvents
 {
-    private string Name;
-    private DateTime Date;
-    private string Lieu;
-    private int MaxParticipants;
-    private int ParticipantsActual;
-    private string? Description = null;
+    /**
+     * Nom de l'event
+     */
+    private string _name;
 
-    public OutdoorEvents(string name, DateTime date, string lieu, int maxParticipants, int participantsActual, string? description)
+    /**
+     * Date de l'event
+     */
+    private DateTime _date;
+
+    /**
+     * Lieu de l'event
+     */
+    private string _lieu;
+
+    /**
+     * Nombre max de participants
+     */
+    private int _maxParticipants;
+
+    /**
+     * Nombre actuel de participants
+     */
+    private int _participantsActual;
+
+    /**
+     * Description de l'event, nullable
+     */
+    private string? _description = null;
+
+    /**
+     * Constructeur d'un event
+     */
+    public OutdoorEvents(string name, DateTime date, string lieu, int maxParticipants, int participantsActual,
+        string? description)
     {
-        Name = name;
-        Date = date;
-        Lieu = lieu;
-        MaxParticipants = maxParticipants;
-        ParticipantsActual = participantsActual;
+        _name = name;
+        _date = date;
+        _lieu = lieu;
+        _maxParticipants = maxParticipants;
+        _participantsActual = participantsActual;
     }
 
     public string Name1
     {
-        get => Name;
-        set => Name = value ?? throw new ArgumentNullException(nameof(value));
+        get => _name;
+        set => _name = value ?? throw new ArgumentNullException(nameof(value));
     }
 
     public DateTime Date1
     {
-        get => Date;
-        set => Date = value;
+        get => _date;
+        set => _date = value;
     }
 
     public string Lieu1
     {
-        get => Lieu;
-        set => Lieu = value ?? throw new ArgumentNullException(nameof(value));
+        get => _lieu;
+        set => _lieu = value ?? throw new ArgumentNullException(nameof(value));
     }
 
     public int MaxParticipants1
     {
-        get => MaxParticipants;
-        set => MaxParticipants = value;
+        get => _maxParticipants;
+        set => _maxParticipants = value;
     }
 
     public int ParticipantsActual1
     {
-        get => ParticipantsActual;
-        set => ParticipantsActual = value;
+        get => _participantsActual;
+        set => _participantsActual = value;
     }
 
     public string? Description1
     {
-        get => Description;
-        set => Description = value ?? throw new ArgumentNullException(nameof(value));
+        get => _description;
+        set => _description = value ?? throw new ArgumentNullException(nameof(value));
     }
 
+    /**
+     * Fonction pour retourner en propre les valeurs
+     */
     public string DisplayData(OutdoorEvents outdoorEvents)
     {
-        if (outdoorEvents.Description == null)
+        if (outdoorEvents._description == null)
         {
             outdoorEvents.Description1 = "Aucune description";
         }
+
         return "- " + outdoorEvents.Name1 + " — " + outdoorEvents.Lieu1 + " — " + outdoorEvents.Date1 + " — " +
                outdoorEvents.ParticipantsActual1 + "/" + outdoorEvents.MaxParticipants1 + " participants  — " +
                outdoorEvents.GetRemainingPlaces(outdoorEvents.ParticipantsActual1, outdoorEvents.MaxParticipants1) +
                " places restantes — " +
                outdoorEvents.IsFull(outdoorEvents.ParticipantsActual1, outdoorEvents.MaxParticipants1) + " — " +
-               outdoorEvents.Description;
+               outdoorEvents._description;
     }
 
 
+    /**
+     * Fonction pour retourner le nombre de places manquantes
+     */
     public int GetRemainingPlaces(int placeActuel, int placeMax)
     {
         return placeMax - placeActuel;
     }
 
+    /**
+     * Fonction pour retourner si oui ou non c'est full
+     */
     public bool IsFull(int placeActuel, int placeMax)
     {
         return placeActuel >= placeMax;
