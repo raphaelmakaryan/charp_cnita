@@ -12,3 +12,4 @@
 /home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorNotebook.Console.pdb
 /home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorNotebook.Console.genruntimeconfig.cache
 /home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/ref/OutdoorNotebook.Console.dll
+/home/user/Documents/COURS/C#/OutdoorNotebook.Console/obj/Debug/net10.0/OutdoorNotebook.Console.sourcelink.json
