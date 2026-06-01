@@ -10,7 +10,7 @@ public class EventService
     public Collection<OutdoorEvents> UpComingRelease(Collection<OutdoorEvents> allEvents)
     {
         Collection<OutdoorEvents> response = new Collection<OutdoorEvents>();
-        var sortieAVenir = from events in allEvents where events.Date1 >= DateTime.Today select events;
+        var sortieAVenir = from events in allEvents where events.Date >= DateTime.Today select events;
         foreach (var events in sortieAVenir)
         {
             response.Add(events);
@@ -26,7 +26,7 @@ public class EventService
     {
         Collection<OutdoorEvents> response = new Collection<OutdoorEvents>();
         var sortieComplete = from events in allEvents
-            where events.IsFull(events.ParticipantsActual1, events.MaxParticipants1)
+            where events.IsFull(events.ParticipantsActual, events.MaxParticipants)
             select events;
         foreach (var events in sortieComplete)
         {
@@ -43,7 +43,7 @@ public class EventService
     {
         Collection<OutdoorEvents> response = new Collection<OutdoorEvents>();
         var sortieDispo = from events in allEvents
-            where !events.IsFull(events.ParticipantsActual1, events.MaxParticipants1) && events.Date1 >= DateTime.Today
+            where !events.IsFull(events.ParticipantsActual, events.MaxParticipants) && events.Date >= DateTime.Today
             select events;
         foreach (var events in sortieDispo)
         {
@@ -79,9 +79,9 @@ public class EventService
         bool result = true;
         foreach (var data in events)
         {
-            result = !(String.IsNullOrEmpty(data.Name1) && String.IsNullOrEmpty(data.Lieu1)) &&
-                     data.MaxParticipants1 > 0 &&
-                     data.ParticipantsActual1 >= 0 && data.ParticipantsActual1 <= data.MaxParticipants1;
+            result = !(String.IsNullOrEmpty(data.Name) && String.IsNullOrEmpty(data.Place)) &&
+                     data.MaxParticipants > 0 &&
+                     data.ParticipantsActual >= 0 && data.ParticipantsActual <= data.MaxParticipants;
         }
 
         return result;

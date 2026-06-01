@@ -42,7 +42,7 @@ public class EventStorageService
             EventsDifficulty difficulty = (EventsDifficulty)Enum.Parse(typeof(EventsDifficulty),
                 events.GetProperty("Difficulty").GetString());
             allEvents.Add(new OutdoorEvents(events.GetProperty("Name").GetString() ?? "Pas de nom",
-                date, events.GetProperty("Lieu").GetString() ?? "Pas de liey",
+                date, events.GetProperty("Place").GetString() ?? "Pas de lieu",
                 events.GetProperty("MaxParticipants").GetInt32(),
                 events.GetProperty("ParticipantsActual").GetInt32(),
                 events.GetProperty("Description").GetString() ?? "Aucune description", difficulty

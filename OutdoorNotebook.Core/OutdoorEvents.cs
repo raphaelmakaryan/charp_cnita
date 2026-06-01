@@ -8,33 +8,51 @@ public class OutdoorEvents
     private string _name;
 
     /**
+ * Date de l'event
+ */
+    private DateTime _date;
+
+    /**
      * Lieu des événements
      */
-    private string _lieu;
+    private string _place;
 
     /**
      * Description des événements, nullable
      */
     private readonly string? _description;
 
+    /**
+     * Nombre max de participants
+     */
+    private int _maxParticipants;
+
+    /**
+     * Nombre actuel de participants
+     */
+    private int _participantsActual;
+
+    /**
+     * Niveau de difficulté
+     */
     private EventsDifficulty _difficulty;
 
     /**
      * Constructeur d'un event
      */
-    public OutdoorEvents(string name, DateTime date, string lieu, int maxParticipants, int participantsActual,
+    public OutdoorEvents(string name, DateTime date, string place, int maxParticipants, int participantsActual,
         string? description, EventsDifficulty difficulty)
     {
         _name = name;
-        Date1 = date;
-        _lieu = lieu;
-        MaxParticipants1 = maxParticipants;
-        ParticipantsActual1 = participantsActual;
+        _date = date;
+        _place = place;
+        _maxParticipants = maxParticipants;
+        _participantsActual = participantsActual;
         _description = description;
         _difficulty = difficulty;
     }
 
-    public string Name1
+    public string Name
     {
         get => _name;
         set => _name = value ?? throw new ArgumentNullException(nameof(value));
@@ -43,12 +61,12 @@ public class OutdoorEvents
     /**
      * Date des événements
      */
-    public DateTime Date1 { get; set; }
+    public DateTime Date { get; set; }
 
-    public string Lieu1
+    public string Place
     {
-        get => _lieu;
-        set => _lieu = value ?? throw new ArgumentNullException(nameof(value));
+        get => _place;
+        set => _place = value ?? throw new ArgumentNullException(nameof(value));
     }
 
     public EventsDifficulty Difficulty
@@ -60,23 +78,25 @@ public class OutdoorEvents
     /**
      * Nombre max de participants
      */
-    public int MaxParticipants1 { get; set; }
+    public int MaxParticipants { get; set; }
 
     /**
      * Nombre actuel de participants
      */
-    public int ParticipantsActual1 { get; set; }
+    public int ParticipantsActual { get; set; }
+
+    public string? Description => _description;
 
     /**
      * Fonction pour retourner en propre les valeurs
      */
     public string DisplayData(OutdoorEvents outdoorEvents)
     {
-        return "- " + outdoorEvents.Name1 + " — " + outdoorEvents.Lieu1 + " — " + outdoorEvents.Date1 + " — " +
-               outdoorEvents.ParticipantsActual1 + "/" + outdoorEvents.MaxParticipants1 + " participants  — " +
-               outdoorEvents.GetRemainingPlaces(outdoorEvents.ParticipantsActual1, outdoorEvents.MaxParticipants1) +
+        return "- " + outdoorEvents.Name + " — " + outdoorEvents.Place + " — " + outdoorEvents.Date + " — " +
+               outdoorEvents.ParticipantsActual + "/" + outdoorEvents.MaxParticipants + " participants  — " +
+               outdoorEvents.GetRemainingPlaces(outdoorEvents.ParticipantsActual, outdoorEvents.MaxParticipants) +
                " places restantes — " +
-               outdoorEvents.IsFull(outdoorEvents.ParticipantsActual1, outdoorEvents.MaxParticipants1) + " — " +
+               outdoorEvents.IsFull(outdoorEvents.ParticipantsActual, outdoorEvents.MaxParticipants) + " — " +
                outdoorEvents._description + " — Difficulté : " + outdoorEvents._difficulty;
     }
 
