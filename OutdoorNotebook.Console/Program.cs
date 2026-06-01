@@ -2,6 +2,8 @@
 
 using OutdoorNotebook.Console.Models;
 
+Tools tools = new Tools();
+
 /**
  * EXERCICE DE 1 A 1.7
 
@@ -31,8 +33,8 @@ Console.WriteLine(sortieDispo.DisplayData(sortieDispo));
 
 /**
  * EXERCICE 1.7
-
-var events = new List<OutdoorEvents>(new OutdoorEvents[]
+*/
+var eventsEx17 = new List<OutdoorEvents>(new OutdoorEvents[]
 {
     new OutdoorEvents("Randonnée au Parmelan", DateTime.Today.AddDays(-1), "Annecy", 12, 3, null),
     new OutdoorEvents("Sortie vélo autour du lac", DateTime.Today.AddDays(+2), "Annecy", 8, 8, null),
@@ -41,17 +43,16 @@ var events = new List<OutdoorEvents>(new OutdoorEvents[]
     new OutdoorEvents("Canoe", DateTime.Today.AddDays(+5), "Annecy", 12, 0, "")
 });
 
-foreach (var outdoorEventse in events)
+foreach (var outdoorEventse in eventsEx17)
 {
     Console.WriteLine(outdoorEventse.DisplayData(outdoorEventse));
 }
-*/
+
+Console.WriteLine(tools.separation());
 
 /**
  * Exercice 1.8
  */
-
-
 var allEvents = new OutdoorEvents[]
 {
     new OutdoorEvents("Randonnée au Parmelan", DateTime.Today.AddDays(-1), "Annecy", 12, 3, null),
@@ -67,9 +68,10 @@ var allEvents = new OutdoorEvents[]
 var sortieAVenir = from events in allEvents where events.Date1 >= DateTime.Today select events;
 foreach (var events in sortieAVenir)
 {
-    //Console.WriteLine(events.DisplayData(events));
+    Console.WriteLine(events.DisplayData(events));
 }
 
+Console.WriteLine(tools.separation());
 
 /**
  * Besoin 2
@@ -79,8 +81,10 @@ var sortieComplete = from events in allEvents
     select events;
 foreach (var events in sortieComplete)
 {
-    //Console.WriteLine(events.DisplayData(events));
+    Console.WriteLine(events.DisplayData(events));
 }
+
+Console.WriteLine(tools.separation());
 
 /**
  * Besoin 3
@@ -99,3 +103,5 @@ foreach (var events in sortieTrié)
 {
     Console.WriteLine(events.DisplayData(events));
 }
+
+Console.WriteLine(tools.separation());
