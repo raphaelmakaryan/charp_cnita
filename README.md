@@ -15,23 +15,23 @@
   <p align="center">
     Bienvenue sur le projet : OutdoorNotebook !
     <br>
-Vous lisez actuellement la documentation, bonne lecture:)
+Vous lisez actuellement la documentation, bonne lecture :)
   </p>
 </div>
 
 <details>
-  <summary>Tables des matieres :</summary>
+  <summary>Tables des matières :</summary>
   <ol>
     <li>
-      <a href="#le-projet">Le projet</a>
-      <a href="#prerequis">Prérequis</a>
-        <a href="#prerequis">Installation</a>
-        <a href="#prerequis">Compilation</a>
-        <a href="#prerequis">Tests</a>
-        <a href="#prerequis">Console</a>
-        <a href="#prerequis">API</a>
-        <a href="#prerequis">Exemples</a>
-        <a href="#prerequis">Structures</a>
+        <a href="#le-projet">Le projet</a>
+        <a href="#prerequis">Prérequis</a>
+        <a href="#installation">Installation</a>
+        <a href="#compilation">Compilation</a>
+        <a href="#tests">Tests</a>
+        <a href="#console">Console</a>
+        <a href="#api">API</a>
+        <a href="#exemples">Exemples</a>
+        <a href="#structures">Structures</a>
     </li>
   </ol>
 </details>
@@ -40,7 +40,6 @@ Vous lisez actuellement la documentation, bonne lecture:)
 
 ---
 <br>
-
 
 # Le projet
 
@@ -51,6 +50,7 @@ OutdoorNotebook est un petit outil pour une association locale : Les Amis de l�
 L’association organise des sorties : randonnée, vélo, trail, ski de fond, etc.
 
 Elle veut un premier outil très simple pour suivre :
+
 - le nom des sorties,
 - leur date,
 - leur lieu,
@@ -64,7 +64,7 @@ Elle veut un premier outil très simple pour suivre :
 
 <br>
 
-Pour utiliser OutdoorNotebook, vous devrez avoir .NET installé sur votre machine.
+Afin d'utiliser OutdoorNotebook, il est nécessaire d'avoir.NET installé sur votre machine.
 
 <br>
 
@@ -74,13 +74,13 @@ Pour utiliser OutdoorNotebook, vous devrez avoir .NET installé sur votre machin
 
 <br>
 
-Pour installer OutdoorNotebook, vous devrez téléchargez le code ou faites un clone Git :
+Pour installer OutdoorNotebook, vous devrez télécharger le code ou faire un clone Git :
 
 ```bash
 git clone https://github.com/raphaelmakaryan/charp_cnita.git
 ```
 
-Un dossier ainsi que tout le projet seras affiché sur votre machine.
+Un dossier ainsi que tout le projet sera affiché sur votre machine.
 
 <br>
 
@@ -90,13 +90,13 @@ Un dossier ainsi que tout le projet seras affiché sur votre machine.
 
 <br>
 
-Pour compiler OutdoorNotebook, vous devrez faire cet commande :
+Pour compiler OutdoorNotebook, vous devrez faire cette commande :
 
 ```bash
 dotnet build
 ```
 
-OutdoorNotebook se généreras.
+OutdoorNotebook se générera.
 
 <br>
 
@@ -112,24 +112,23 @@ Pour lancer les tests de OutdoorNotebook, vous devrez faire cet commande :
 dotnet test
 ```
 
-Lest test de OutdoorNotebook se lanceras.
+Les tests de OutdoorNotebook se lanceront.
 
 <br>
 
 <p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>
 
-
 # Console
 
 <br>
 
-Pour lancer la console OutdoorNotebook, vous devrez faire cet commande :
+Pour lancer la console d'OutdoorNotebook, vous devrez faire cette commande :
 
 ```bash
 dotnet run --project OutdoorNotebook.Console
 ```
 
-OutdoorNotebook se lanceras avec une liste d'evenements préconfigurés.
+OutdoorNotebook se lancera avec une liste d'événements préconfigurés.
 
 <br>
 
@@ -139,15 +138,16 @@ OutdoorNotebook se lanceras avec une liste d'evenements préconfigurés.
 
 <br>
 
-Pour lancer l'API de OutdoorNotebook, vous devrez faire cet commande :
+Pour lancer l'API de OutdoorNotebook, vous devrez faire cette commande :
 
 ```bash
 dotnet run --project OutdoorNotebook.Api
 ```
 
-Un serveur se lanceras avec une URL prédéfini dans votre console.
+Un serveur se lancera avec une URL prédéfinie dans votre console.
 
-Il y'a 3 routes actuellements disponible : 
+Il y a 3 routes actuellement disponibles :
+
 - /
 - /events
 - /events/upcoming
@@ -156,12 +156,11 @@ Il y'a 3 routes actuellements disponible :
 
 <p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>
 
-
 # Exemples
 
 <br>
 
-En quelque images, voici l'utilisation de OutdoorNotebook :
+En quelques images, voici l'utilisation de OutdoorNotebook :
 
 <img src="./github/1.png">
 <img src="./github/2.png">
@@ -170,171 +169,39 @@ En quelque images, voici l'utilisation de OutdoorNotebook :
 
 <p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>
 
-# Structure
+# Structures
 
 <br>
 
-Voici comment est structurer OutdoorNotebook : 
+## Data
 
-``
-├── data/
-│   └── events.json
-├── OutdoorNotebook.Console/
-│   ├── Exercices/
-│   │   ├── Exercice1
-│   │   ├── Exercice2
-│   │   └── Exercice3
-│   └── Program.cs
-├── OutdoorNotebook.Core/
-│   ├── bin/
-│   │   └── Debug/
-│   │       └── net10.0/
-│   │           ├── OutdoorNotebook.Core.deps.json
-│   │           ├── OutdoorNotebook.Core.dll
-│   │           └── OutdoorNotebook.Core.pdb
-│   ├── obj/
-│   │   ├── Debug/
-│   │   │   └── net10.0/
-│   │   │       ├── ref/
-│   │   │       │   └── OutdoorNotebook.Core.dll
-│   │   │       ├── refint/
-│   │   │       │   └── OutdoorNotebook.Core.dll
-│   │   │       ├── .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
-│   │   │       ├── OutdoorNotebook.Core.AssemblyInfo.cs
-│   │   │       ├── OutdoorNotebook.Core.AssemblyInfoInputs.cache
-│   │   │       ├── OutdoorNotebook.Core.assets.cache
-│   │   │       ├── OutdoorNotebook.Core.csproj.CoreCompileInputs.cache
-│   │   │       ├── OutdoorNotebook.Core.csproj.FileListAbsolute.txt
-│   │   │       ├── OutdoorNotebook.Core.dll
-│   │   │       ├── OutdoorNotebook.Core.GeneratedMSBuildEditorConfig.editorconfig
-│   │   │       ├── OutdoorNotebook.Core.GlobalUsings.g.cs
-│   │   │       ├── OutdoorNotebook.Core.pdb
-│   │   │       └── OutdoorNotebook.Core.sourcelink.json
-│   │   ├── OutdoorNotebook.Core.csproj.nuget.dgspec.json
-│   │   ├── OutdoorNotebook.Core.csproj.nuget.g.props
-│   │   ├── OutdoorNotebook.Core.csproj.nuget.g.targets
-│   │   ├── project.assets.json
-│   │   ├── project.nuget.cache
-│   │   ├── project.packagespec.json
-│   │   ├── rider.project.model.nuget.info
-│   │   └── rider.project.restore.info
-│   ├── EventService.cs
-│   ├── EventStorageService.cs
-│   ├── OutdoorEvents.cs
-│   ├── OutdoorNotebook.Core.csproj
-│   └── Tools.cs
-├── OutdoorNotebook.Tests/
-│   ├── bin/
-│   │   └── Debug/
-│   │       └── net10.0/
-│   │           ├── cs/
-│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-│   │           ├── de/
-│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-│   │           ├── es/
-│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-│   │           ├── fr/
-│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-│   │           ├── it/
-│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-│   │           ├── ja/
-│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-│   │           ├── ko/
-│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-│   │           ├── pl/
-│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-│   │           ├── pt-BR/
-│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-│   │           ├── ru/
-│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-│   │           ├── tr/
-│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-│   │           ├── zh-Hans/
-│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-│   │           ├── zh-Hant/
-│   │           │   ├── Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CoreUtilities.resources.dll
-│   │           │   ├── Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-│   │           │   ├── Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-│   │           │   └── Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-│   │           ├── .msCoverageSourceRootsMapping_OutdoorNotebook.Tests
-│   │           ├── CoverletSourceRootsMapping_OutdoorNotebook.Tests
-│   │           ├── Microsoft.TestPlatform.CommunicationUtilities.dll
-│   │           ├── Microsoft.TestPlatform.CoreUtilities.dll
-│   │           ├── Microsoft.TestPlatform.CrossPlatEngine.dll
-│   │           ├── Microsoft.TestPlatform.PlatformAbstractions.dll
-│   │           ├── Microsoft.TestPlatform.Utilities.dll
-│   │           ├── Microsoft.VisualStudio.CodeCoverage.Shim.dll
-│   │           ├── Microsoft.VisualStudio.TestPlatform.Common.dll
-│   │           ├── Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
-│   │           ├── Newtonsoft.Json.dll
-│   │           ├── OutdoorNotebook.Core.dll
-│   │           ├── OutdoorNotebook.Core.pdb
-│   │           ├── OutdoorNotebook.Tests.deps.json
-│   │           ├── OutdoorNotebook.Tests.dll
-│   │           ├── OutdoorNotebook.Tests.pdb
-│   │           ├── OutdoorNotebook.Tests.runtimeconfig.json
-│   │           ├── testhost.dll
-│   │           ├── xunit.abstractions.dll
-│   │           ├── xunit.assert.dll
-│   │           ├── xunit.core.dll
-│   │           ├── xunit.execution.dotnet.dll
-│   │           └── xunit.runner.visualstudio.testadapter.dll
-│   ├── OutdoorNotebook.Tests.csproj
-│   └── OutdoorNoteBookTests.cs
-├── OutdoorNotebook.slnx
-└── README.md
-``
+Dans ce dossier, il contient un fichier JSON, qui stocke des événements.
 
+## OutdoorNotebook.Api
 
+Dans ce dossier, il contient le fichier Program.cs, qui est le fichier moteur, afin d'avoir les routes/endpoints et le
+lancement du serveur.
+
+## OutdoorNotebook.Console
+
+Dans ce dossier, il contient le fichier Program.cs, qui est le fichier moteur, afin d'avoir tous les rendus visibles de
+l'outil.
+
+## OutdoorNotebook.Core
+
+Dans ce dossier, il contient :
+
+- EventService : class services qui stocke toutes les méthodes,
+- EventStorageService : class qui permet de lire et de désérialiser le fichier JSON "events" et de rendre ces données
+  lisibles par la logique métier,
+- OutdoorEvents : class maîtresse, qui contient toutes les propriétés ainsi que les méthodes nécessaires pour les
+  événements,
+- Tools : class d'outils.
+
+## OutdoorNotebook.Tests
+
+Dans ce dossier, il contient le fichier OutdoorNoteBookTests.cs, qui est le fichier qui stocke tous les tests pour
+OutdoorNotebook.
 
 <br>
 
