@@ -4,6 +4,8 @@ namespace OutdoorNotebook.Core;
 
 public class EventService
 {
+    readonly EventStorageService _eventStorageService = new EventStorageService();
+
     /**
      * Fonction pour ressortir les sorties qui sont futures
      */
@@ -92,7 +94,7 @@ public class EventService
      */
     public Collection<OutdoorEvents> ApiEventsDefault()
     {
-        return CreateDefaultData();
+        return _eventStorageService.LoadJson();
     }
 
     /**
@@ -100,6 +102,25 @@ public class EventService
      */
     public Collection<OutdoorEvents> ApiEventsUpcoming()
     {
-        return UpComingRelease(CreateDefaultData());
+        return UpComingRelease(_eventStorageService.LoadJson());
+    }
+
+    /**
+     *
+     */
+    public Collection<OutdoorEvents> ApiEventsFilterPlace()
+    {
+        Collection<OutdoorEvents> response = new Collection<OutdoorEvents>();
+        /*
+        var sortieDispo = from events in _eventStorageService.LoadJson()
+            where !events.IsFull(events.ParticipantsActual, events.MaxParticipants) && events.Date >= DateTime.Today
+            select events;
+        foreach (var events in sortieDispo)
+        {
+            response.Add(events);
+        }
+
+        */
+        return response;
     }
 }
