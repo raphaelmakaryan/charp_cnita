@@ -148,4 +148,10 @@
     2. Afficher les météos disponibles et mettre “météo indisponible” pour les autres.
     3. Réessayer l’appel qui a échoué.
        Il n’y a pas une seule bonne réponse. Cela dépend du besoin métier.
+
 - Je préfére le 2
+
+24. Pourquoi dit-on que l’annulation est coopérative ?
+
+- Car pour annuler une tâche, il faut que la tâche elle même vérifie si une demande d'annulation a été faite, et qu'elle
+  accepte de s'arrêter, donc c'est une coopération entre la tâche et le code qui demande l'annulation

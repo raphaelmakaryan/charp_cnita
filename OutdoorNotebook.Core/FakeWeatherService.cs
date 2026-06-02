@@ -2,9 +2,11 @@
 
 public class FakeWeatherService
 {
-    public async Task<WeatherInfo> GetWeatherAsync(string location)
+    public async Task<WeatherInfo> GetWeatherAsync(
+        string location,
+        CancellationToken cancellationToken)
     {
-        await Task.Delay(1000);
+        await Task.Delay(3000, cancellationToken);
         if (location.Contains("Erreur", StringComparison.OrdinalIgnoreCase))
         {
             throw new InvalidOperationException(
@@ -13,10 +15,11 @@ public class FakeWeatherService
         }
 
         return new WeatherInfo
+
         {
             Location = location,
-            Summary = "Ensoleillé",
-            TemperatureCelsius = 18
+            Summary = "Nuageux",
+            TemperatureCelsius = 12
         };
     }
 }
