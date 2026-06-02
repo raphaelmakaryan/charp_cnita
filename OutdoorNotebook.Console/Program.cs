@@ -1,19 +1,22 @@
 ﻿using OutdoorNotebook.Core;
 
-Tools tools = new Tools();
+
 var weatherService = new FakeWeatherService();
-var storage = new EventStorageServiceAsync();
 var start = DateTime.Now;
+var storage = new EventStorageServiceAsync();
 var events = await storage.LoadEventsAsync();
 foreach (var outdoorEvent in events)
 {
-    var weather = await weatherService.GetWeatherAsync(outdoorEvent.Place);
-    Console.WriteLine(OutdoorEvents.DisplayData(outdoorEvent));
-    Console.WriteLine(tools.Separation());
-    Console.WriteLine($"{outdoorEvent.Name} — {weather.Location} — {weather.Summary} — {weather.TemperatureCelsius}°C");
-    Console.WriteLine(tools.Separation());
+    var weatherTasks = events
+        .Select(e => weatherService.GetWeatherAsync(e.Place))
+        .ToList();
+    var weatherResults = await Task.WhenAll(weatherTasks);
+    foreach (var weather in weatherResults)
+    {
+        Console.WriteLine(
+            $"{weather.Location} — {weather.Summary} — {weather.TemperatureCelsius}°C"
+        );
+    }
 }
-
 var duration = DateTime.Now - start;
 Console.WriteLine($"Durée : {duration.TotalSeconds:F2} secondes");
-Console.WriteLine(tools.Separation());

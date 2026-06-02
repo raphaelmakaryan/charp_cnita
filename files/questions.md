@@ -125,4 +125,11 @@
 19. Si chaque météo prend environ une seconde, combien de temps prendra le programme pour 5
     sorties ?
 
-- 5 secondes, car les appels sont fait de manière synchrone, donc il attend la réponse de chaque appel avant de faire le suivant
+- 5 secondes, car les appels sont fait de manière synchrone, donc il attend la réponse de chaque appel avant de faire le
+  suivant
+
+20. Pourquoi la version avec `Task.WhenAll` est-elle plus rapide dans cet exemple ?
+
+- Car elle permet de faire les appels de manière asynchrone, donc elle ne bloque pas le programme en attendant la
+  réponse de chaque appel, elle les fait tous en même temps, et attend la réponse de tous les appels en même temps, ce
+  qui réduit le temps d'attente total
