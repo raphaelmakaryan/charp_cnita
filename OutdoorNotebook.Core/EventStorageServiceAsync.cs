@@ -51,6 +51,7 @@ public class EventStorageServiceAsync
     public async Task<List<OutdoorEvents>> LoadEventsAsync()
     {
         var json = await File.ReadAllTextAsync(ResolveJsonPath());
+        Console.WriteLine(json);
         using JsonDocument doc = JsonDocument.Parse(json);
         JsonElement root = doc.RootElement;
         JsonElement allData = root.GetProperty("events");
@@ -63,7 +64,7 @@ public class EventStorageServiceAsync
         return JsonSerializer.Deserialize<List<OutdoorEvents>>(allData.GetRawText(), options)
                ?? new List<OutdoorEvents>();
     }
-    
+
     /**
      * JsonConverter personnalisé pour gérer les différentes formats de date dans le JSON, avec une tolérance pour les formats inattendus et une sérialisation uniforme
      */
@@ -101,5 +102,28 @@ public class EventStorageServiceAsync
         {
             writer.WriteStringValue(value.ToString(_formats[0], CultureInfo.InvariantCulture));
         }
+    }
+
+    /**
+     * Fonction asynchrone pour ajouter un event au json
+     */
+    public async Task SaveEventsAsync(List<OutdoorEvents> events)
+    {
+        var options = new JsonSerializerOptions
+        {
+            WriteIndented = true,
+            PropertyNameCaseInsensitive = true
+        };
+        options.Converters.Add(new DateTimeConverter("MM-dd-yyyy"));
+        options.Converters.Add(new JsonStringEnumConverter());
+        var wrapper = new { events = events };
+        var json = JsonSerializer.Serialize(wrapper, options);
+        var directory = Path.GetDirectoryName(ResolveJsonPath());
+        if (!string.IsNullOrWhiteSpace(directory))
+        {
+            Directory.CreateDirectory(directory);
+        }
+
+        await File.WriteAllTextAsync(ResolveJsonPath(), json);
     }
 }

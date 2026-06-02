@@ -111,3 +111,6 @@
 16. Pourquoi `SaveEventsAsync` retourne-t-elle : Task et non : Task<List<OutdoorEvent>>
 
 - Car elle ne retourne rien, elle sauvegarde juste les données
+
+17. Pourquoi cette ligne ne donne-t-elle pas directement une liste ? var events = storage.LoadEventsAsync("data/events.json");
+- Parce que l'appel de la fonction ne comporte pas le await, donc elle retourne une tâche, et non la liste directement
