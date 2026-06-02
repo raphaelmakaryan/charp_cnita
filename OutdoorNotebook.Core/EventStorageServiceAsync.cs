@@ -51,7 +51,6 @@ public class EventStorageServiceAsync
     public async Task<List<OutdoorEvents>> LoadEventsAsync()
     {
         var json = await File.ReadAllTextAsync(ResolveJsonPath());
-        Console.WriteLine(json);
         using JsonDocument doc = JsonDocument.Parse(json);
         JsonElement root = doc.RootElement;
         JsonElement allData = root.GetProperty("events");

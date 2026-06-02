@@ -2,15 +2,63 @@
   "events": [
     {
       "Id": 0,
-      "Name": "Randonn\u00E9e au Parmelan",
-      "Date": "06-07-2026",
-      "Place": "Annecy",
+      "Name": "Randonnée hivernale au Semnoz",
+      "Date": "02-15-2024",
+      "Place": "Semnoz",
+      "MaxParticipants": 10,
+      "ParticipantsActual": 8,
+      "Description": "Randonnée en raquettes dans la neige. Paysages époustouflants.",
       "Difficulty": "Difficile",
+      "Duration": 50,
+      "MeetingPlace": "Parking du Semnoz"
+    },
+    {
+      "Id": 1,
+      "Name": "Sortie raquettes à la Clusaz",
+      "Date": "01-20-2025",
+      "Place": "La Clusaz",
+      "MaxParticipants": 15,
+      "ParticipantsActual": 12,
+      "Description": "Balade en raquettes avec guide. Niveau intermédiaire.",
+      "Difficulty": "Normal",
+      "Duration": 100,
+      "MeetingPlace": "Office de tourisme de La Clusaz"
+    },
+    {
+      "Id": 2,
+      "Name": "Cours de ski de fond",
+      "Date": "03-10-2025",
+      "Place": "Le Grand-Bornand",
+      "MaxParticipants": 12,
+      "ParticipantsActual": 10,
+      "Description": "Initiation au ski de fond sur les pistes du Grand-Bornand.",
+      "Difficulty": "Facile",
+      "Duration": 150,
+      "MeetingPlace": "Station de ski du Grand-Bornand, point de location"
+    },
+    {
+      "Id": 3,
+      "Name": "Randonnée au Parmelan",
+      "Date": "05-03-2025",
+      "Place": "Annecy",
       "MaxParticipants": 12,
       "ParticipantsActual": 3,
-      "Description": "Sortie tranquille",
+      "Description": "Randonnée en montagne avec vue sur le lac. Prévoir de bonnes chaussures.",
+      "Difficulty": "Difficile",
       "Duration": 200,
-      "MeetingPlace": "Parking du col de la Forclaz"
+      "MeetingPlace": "Parking du départ de la randonnée (Col de la Forclaz)"
+    },
+    {
+      "Id": 4,
+      "Name": "Kayak sur le lac",
+      "Date": "06-02-2025",
+      "Place": "Semnoz",
+      "MaxParticipants": 20,
+      "ParticipantsActual": 5,
+      "Description": "Session de kayak en groupe sur les eaux calmes du lac d'Annecy.",
+      "Difficulty": "Normal",
+      "Duration": 200,
+      "MeetingPlace": "Base nautique du Semnoz"
     }
   ]
 }

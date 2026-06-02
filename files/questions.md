@@ -121,3 +121,8 @@
 
 - Car il utiliser des fonctions asynchrone, et pour pouvoir utiliser le await, il faut que la fonction soit async, et
   retourne une tâche
+
+19. Si chaque météo prend environ une seconde, combien de temps prendra le programme pour 5
+    sorties ?
+
+- 5 secondes, car les appels sont fait de manière synchrone, donc il attend la réponse de chaque appel avant de faire le suivant
