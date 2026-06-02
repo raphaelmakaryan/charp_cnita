@@ -166,7 +166,7 @@ dotnet run --project OutdoorNotebook.Api
 
 Un serveur se lancera avec une URL prédéfinie dans votre console.
 
-Il y a 7 routes actuellement disponibles :
+Il y a 9 routes actuellement disponibles :
 
 - /
 - /weather
@@ -174,7 +174,9 @@ Il y a 7 routes actuellement disponibles :
 - /events/upcoming
 - /events/filter/place/{place}
 - /events/filter/difficulty/{difficulty}
-- /event/{id}
+- /events/{id}
+- /async/events
+- /async/events/weather
 
 OutdoorNotebook contient également un Swagger, qui est disponible à l'URL suivante : http://localhost:[port]
 /swagger/index.html
