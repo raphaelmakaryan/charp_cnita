@@ -3,6 +3,7 @@
 Tools tools = new Tools();
 var weatherService = new FakeWeatherService();
 var storage = new EventStorageServiceAsync();
+var start = DateTime.Now;
 var events = await storage.LoadEventsAsync();
 foreach (var outdoorEvent in events)
 {
@@ -10,5 +11,9 @@ foreach (var outdoorEvent in events)
     Console.WriteLine(OutdoorEvents.DisplayData(outdoorEvent));
     Console.WriteLine(tools.Separation());
     Console.WriteLine($"{outdoorEvent.Name} — {weather.Location} — {weather.Summary} — {weather.TemperatureCelsius}°C");
+    Console.WriteLine(tools.Separation());
 }
+
+var duration = DateTime.Now - start;
+Console.WriteLine($"Durée : {duration.TotalSeconds:F2} secondes");
 Console.WriteLine(tools.Separation());

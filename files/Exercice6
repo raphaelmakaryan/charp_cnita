@@ -1,0 +1,9 @@
+using OutdoorNotebook.Core;
+
+var storage = new EventStorageServiceAsync();
+var events = await storage.LoadEventsAsync();
+Console.WriteLine("Sorties outdoor");
+foreach (var outdoorEvent in events)
+{
+    Console.WriteLine(OutdoorEvents.DisplayData(outdoorEvent));
+}

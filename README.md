@@ -81,7 +81,7 @@ Elle veut un premier outil très simple pour suivre :
 
 <br>
 
-Afin d'utiliser OutdoorNotebook, il est nécessaire d'avoir.NET installé sur votre machine.
+Afin d'utiliser OutdoorNotebook, il est nécessaire d'avoir .NET installé sur votre machine.
 
 <br>
 
@@ -147,6 +147,9 @@ dotnet run --project OutdoorNotebook.Console
 
 OutdoorNotebook se lancera avec une liste d'événements préconfigurés.
 
+Le temps d'exécution de la console est estimé à 5,19 secondes pour 5 événements, pour l'utilisation du fichier "
+events.json".
+
 <br>
 
 <p align="right">(<a href="#readme-top">Revenir en haut</a>)</p>
@@ -173,7 +176,8 @@ Il y a 7 routes actuellement disponibles :
 - /events/filter/difficulty/{difficulty}
 - /event/{id}
 
-OutdoorNotebook contient également un Swagger, qui est disponible à l'URL suivante : http://localhost:[port]/swagger/index.html
+OutdoorNotebook contient également un Swagger, qui est disponible à l'URL suivante : http://localhost:[port]
+/swagger/index.html
 
 <br>
 
@@ -200,7 +204,10 @@ En quelques images, voici l'utilisation de OutdoorNotebook :
 
 ## Data
 
-Dans ce dossier, il contient un fichier JSON, qui stocke des événements.
+Dans ce dossier, il contient deux fichier JSON :
+
+- "events.json" qui stocke 5 événements, utilisé dans le contexte de tests et de la console,
+- "eventsBackup.json" qui stocke 20 événements, utilisé dans le contexte de l'API.
 
 ## OutdoorNotebook.Api
 
