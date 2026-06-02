@@ -64,14 +64,15 @@ public class EventService
         return
         [
             new OutdoorEvents("Randonnée au Parmelan", DateTime.Today.AddDays(-1), "Annecy", 12, 3, null,
-                EventsDifficulty.Difficile, 150),
+                EventsDifficulty.Difficile, 150, "Porte de la chappelle"),
             new OutdoorEvents("Sortie vélo autour du lac", DateTime.Today.AddDays(+2), "Annecy", 8, 8, null,
-                EventsDifficulty.Facile, 100),
+                EventsDifficulty.Facile, 100, "Porte de la chappelle"),
             new OutdoorEvents("Kayak", DateTime.Today.AddDays(+10), "Cran-Gevrier", 20, 5, null,
-                EventsDifficulty.Normal, 300),
+                EventsDifficulty.Normal, 300, "Porte de la chappelle"),
             new OutdoorEvents("Jogging", DateTime.Today.AddDays(+1), "Annecy", 12, 12, null, EventsDifficulty.Facile,
-                200),
-            new OutdoorEvents("Canoe", DateTime.Today.AddDays(+5), "Annecy", 12, 0, null, EventsDifficulty.Normal, 300)
+                200, "Porte de la chappelle"),
+            new OutdoorEvents("Canoe", DateTime.Today.AddDays(+5), "Annecy", 12, 0, null, EventsDifficulty.Normal, 300,
+                "Porte de la chappelle")
         ];
     }
 

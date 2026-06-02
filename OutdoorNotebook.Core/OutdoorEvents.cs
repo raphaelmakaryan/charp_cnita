@@ -43,10 +43,15 @@ public class OutdoorEvents
     private int _duration;
 
     /**
+     * Lieu de RDV
+     */
+    private string _meetingPlace;
+
+    /**
      * Constructeur d'un event
      */
     public OutdoorEvents(string name, DateTime date, string place, int maxParticipants, int participantsActual,
-        string? description, EventsDifficulty difficulty, int duration)
+        string? description, EventsDifficulty difficulty, int duration, string meetingPlace)
     {
         _name = name;
         _date = date;
@@ -56,6 +61,7 @@ public class OutdoorEvents
         _description = description;
         _difficulty = difficulty;
         _duration = duration;
+        _meetingPlace = meetingPlace;
     }
 
     public string Name
@@ -99,6 +105,12 @@ public class OutdoorEvents
         set => _duration = value;
     }
 
+    public string MeetingPlace
+    {
+        get => _meetingPlace;
+        set => _meetingPlace = value ?? throw new ArgumentNullException(nameof(value));
+    }
+
     /**
      * Fonction pour retourner en propre les valeurs
      */
@@ -110,7 +122,8 @@ public class OutdoorEvents
                " places restantes — " +
                outdoorEvents.IsFull(outdoorEvents.ParticipantsActual, outdoorEvents.MaxParticipants) + " — " +
                outdoorEvents._description + " — Difficulté : " + outdoorEvents._difficulty + " — Durée : " +
-               outdoorEvents.Duration;
+               outdoorEvents.Duration + " — RDV : " +
+               outdoorEvents.MeetingPlace;
     }
 
 

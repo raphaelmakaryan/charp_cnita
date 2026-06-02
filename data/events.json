@@ -8,7 +8,8 @@
       "ParticipantsActual": 8,
       "Description": "Randonnée en raquettes dans la neige. Paysages époustouflants.",
       "Difficulty": "Difficile",
-      "Duration": 50
+      "Duration": 50,
+      "MeetingPlace": "Parking du Semnoz"
     },
     {
       "Name": "Sortie raquettes à la Clusaz",
@@ -18,7 +19,8 @@
       "ParticipantsActual": 12,
       "Description": "Balade en raquettes avec guide. Niveau intermédiaire.",
       "Difficulty": "Normal",
-      "Duration": 100
+      "Duration": 100,
+      "MeetingPlace": "Office de tourisme de La Clusaz"
     },
     {
       "Name": "Cours de ski de fond",
@@ -28,7 +30,8 @@
       "ParticipantsActual": 10,
       "Description": "Initiation au ski de fond sur les pistes du Grand-Bornand.",
       "Difficulty": "Facile",
-      "Duration": 150
+      "Duration": 150,
+      "MeetingPlace": "Station de ski du Grand-Bornand, point de location"
     },
     {
       "Name": "Randonnée au Parmelan",
@@ -38,7 +41,8 @@
       "ParticipantsActual": 3,
       "Description": "Randonnée en montagne avec vue sur le lac. Prévoir de bonnes chaussures.",
       "Difficulty": "Difficile",
-      "Duration": 200
+      "Duration": 200,
+      "MeetingPlace": "Parking du départ de la randonnée (Col de la Forclaz)"
     },
     {
       "Name": "Kayak sur le lac",
@@ -48,7 +52,8 @@
       "ParticipantsActual": 5,
       "Description": "Session de kayak en groupe sur les eaux calmes du lac d'Annecy.",
       "Difficulty": "Normal",
-      "Duration": 200
+      "Duration": 200,
+      "MeetingPlace": "Base nautique du Semnoz"
     },
     {
       "Name": "Sortie vélo autour du lac",
@@ -58,7 +63,8 @@
       "ParticipantsActual": 10,
       "Description": "Parcours de 40 km autour du lac d'Annecy. Réservé aux cyclistes confirmés.",
       "Difficulty": "Facile",
-      "Duration": 100
+      "Duration": 100,
+      "MeetingPlace": "Parking de la piste cyclable de Poisy"
     },
     {
       "Name": "Jogging matinal",
@@ -68,7 +74,8 @@
       "ParticipantsActual": 2,
       "Description": "Petite sortie tranquille le long des berges du lac. Ouvert à tous les niveaux.",
       "Difficulty": "Normal",
-      "Duration": 300
+      "Duration": 300,
+      "MeetingPlace": "Parking de la plage d'Epagny"
     },
     {
       "Name": "Escalade à la Tourrette",
@@ -78,7 +85,8 @@
       "ParticipantsActual": 4,
       "Description": "Séance d'escalade encadrée pour débutants. Matériel fourni.",
       "Difficulty": "Difficile",
-      "Duration": 150
+      "Duration": 150,
+      "MeetingPlace": "Parking du site d'escalade de la Tourrette"
     },
     {
       "Name": "Yoga au bord du lac",
@@ -88,7 +96,8 @@
       "ParticipantsActual": 12,
       "Description": "Séance de yoga en plein air avec vue sur les montagnes. Apportez votre tapis.",
       "Difficulty": "Facile",
-      "Duration": 400
+      "Duration": 400,
+      "MeetingPlace": "Parc de l'Impérial, pelouse près du lac"
     },
     {
       "Name": "Course d'orientation en forêt",
@@ -98,7 +107,8 @@
       "ParticipantsActual": 6,
       "Description": "Parcours chronométré en forêt. Réservé aux membres du club.",
       "Difficulty": "Normal",
-      "Duration": 600
+      "Duration": 600,
+      "MeetingPlace": "Parking de la forêt de la Mandallaz"
     },
     {
       "Name": "Pique-nique au Semnoz",
@@ -108,7 +118,8 @@
       "ParticipantsActual": 10,
       "Description": "Pique-nique convivial au sommet du Semnoz. Chaque participant apporte son repas.",
       "Difficulty": "Facile",
-      "Duration": 100
+      "Duration": 100,
+      "MeetingPlace": "Aire de pique-nique du Semnoz"
     },
     {
       "Name": "Trail nocturne",
@@ -118,7 +129,8 @@
       "ParticipantsActual": 5,
       "Description": "Course à pied de nuit avec frontales obligatoires. Parcours de 10 km.",
       "Difficulty": "Difficile",
-      "Duration": 200
+      "Duration": 200,
+      "MeetingPlace": "Parking du Col de la Forclaz"
     },
     {
       "Name": "Atelier photo nature",
@@ -128,7 +140,8 @@
       "ParticipantsActual": 3,
       "Description": "Atelier pour apprendre à photographier la faune et la flore locales.",
       "Difficulty": "Facile",
-      "Duration": 300
+      "Duration": 300,
+      "MeetingPlace": "Entrée principale du Parc de la Tourrette"
     },
     {
       "Name": "Marche nordique",
@@ -138,7 +151,8 @@
       "ParticipantsActual": 18,
       "Description": "Marche dynamique avec bâtons. Adapté à tous les niveaux.",
       "Difficulty": "Normal",
-      "Duration": 200
+      "Duration": 200,
+      "MeetingPlace": "Parking du centre sportif de Seynod"
     },
     {
       "Name": "Sortie spéléologie",
@@ -148,7 +162,8 @@
       "ParticipantsActual": 2,
       "Description": "Exploration de grottes encadrée par des professionnels. Équipement fourni.",
       "Difficulty": "Difficile",
-      "Duration": 250
+      "Duration": 250,
+      "MeetingPlace": "Parking de la Grotte de la Diau"
     },
     {
       "Name": "Cours de paddle",
@@ -158,7 +173,8 @@
       "ParticipantsActual": 4,
       "Description": "Initiation au paddle sur le lac d'Annecy. Accessible aux débutants.",
       "Difficulty": "Facile",
-      "Duration": 600
+      "Duration": 600,
+      "MeetingPlace": "Plage d'Albigny, point de location"
     },
     {
       "Name": "Randonnée aquatique",
@@ -168,7 +184,8 @@
       "ParticipantsActual": 8,
       "Description": "Randonnée en eau vive avec passages dans l'eau. Prévoir maillot de bain et chaussures de randonnée.",
       "Difficulty": "Normal",
-      "Duration": 100
+      "Duration": 100,
+      "MeetingPlace": "Parking des Gorges du Fier"
     },
     {
       "Name": "Concours de pêche",
@@ -178,7 +195,8 @@
       "ParticipantsActual": 20,
       "Description": "Concours de pêche amateur. Prêt de cannes possible sur place.",
       "Difficulty": "Facile",
-      "Duration": 200
+      "Duration": 200,
+      "MeetingPlace": "Quai de pêche de Talloires"
     },
     {
       "Name": "Via ferrata à Thônes",
@@ -188,7 +206,8 @@
       "ParticipantsActual": 3,
       "Description": "Parcours de via ferrata avec vue imprenable. Équipement fourni.",
       "Difficulty": "Difficile",
-      "Duration": 250
+      "Duration": 250,
+      "MeetingPlace": "Escalier de la via ferrata de Thônes"
     },
     {
       "Name": "Balade en montgolfière",
@@ -198,7 +217,8 @@
       "ParticipantsActual": 2,
       "Description": "Vol en montgolfière au-dessus du lac d'Annecy. Réservation obligatoire.",
       "Difficulty": "Facile",
-      "Duration": 200
+      "Duration": 200,
+      "MeetingPlace": "Le Pâquier"
     }
   ]
 }
