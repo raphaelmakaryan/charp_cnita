@@ -135,5 +135,17 @@
   qui réduit le temps d'attente total
 
 21. Une méthode `async` utilise-t-elle toujours un nouveau thread (fil d'éxécution) ?
+
 - Non, une méthode async n'utilise pas forcément un nouveau thread, elle peut utiliser le même thread, mais elle
   libère le thread pendant l'attente de la réponse, ce qui permet d'optimiser les ressources et d'éviter les blocages
+
+22. Que se passe-t-il si une tâche échoue mais que les autres réussissent?
+
+- Si une tâche échoue, elle va tomber sur l'exception mais le reste des tâches vont continuer à s'exécuter
+
+23. Dans une vraie application, que préféreriez-vous ?
+    1. Faire échouer toute l’opération si une seule météo échoue.
+    2. Afficher les météos disponibles et mettre “météo indisponible” pour les autres.
+    3. Réessayer l’appel qui a échoué.
+       Il n’y a pas une seule bonne réponse. Cela dépend du besoin métier.
+- Je préfére le 2

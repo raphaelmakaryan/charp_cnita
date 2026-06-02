@@ -6,13 +6,21 @@ var storage = new EventStorageServiceAsync();
 var events = await storage.LoadEventsAsync();
 foreach (var outdoorEvent in events)
 {
+    var weatherTasks = events
+        .Select(e => weatherService.GetWeatherAsync(e.Place))
+        .ToList();
     try
     {
-        var weather = await weatherService.GetWeatherAsync("ErreurVille");
-        Console.WriteLine(weather.Summary);
+        var weatherResults = await Task.WhenAll(weatherTasks);
+        foreach (var weather in weatherResults)
+        {
+            Console.WriteLine(
+                $"{weather.Location} — {weather.Summary} — {weather.TemperatureCelsius}°C"
+            );
+        }
     }
-    catch (InvalidOperationException ex)
+    catch (Exception ex)
     {
-        Console.WriteLine($"Erreur météo : {ex.Message}");
+        Console.WriteLine($"Au moins une récupération météo a échoué : {ex.Message}");
     }
 }
