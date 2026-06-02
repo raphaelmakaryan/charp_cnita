@@ -107,3 +107,7 @@
 
 - List<OutdoorEvent> c'est une liste d'outdoorEvent qui synchrone, tandis que Task<List<OutdoorEvent>> c'est une tâche
   qui va retourner une liste d'outdoorEvent, donc asynchrone
+
+16. Pourquoi `SaveEventsAsync` retourne-t-elle : Task et non : Task<List<OutdoorEvent>>
+
+- Car elle ne retourne rien, elle sauvegarde juste les données
