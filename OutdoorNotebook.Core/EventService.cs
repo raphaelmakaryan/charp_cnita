@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using System.Globalization;
 
 namespace OutdoorNotebook.Core;
 
@@ -106,7 +107,7 @@ public class EventService
     }
 
     /**
-     *
+     * Fonction pour la route API "/events/filter/place/{place}", filtrage par lieu
      */
     public Collection<OutdoorEvents> ApiEventsFilterPlace(String place)
     {
@@ -117,6 +118,24 @@ public class EventService
         foreach (var events in sortieWithPlace)
         {
             response.Add(events);
+        }
+
+        return response;
+    }
+
+    public Collection<OutdoorEvents> ApiEventsFilterDifficulty(String difficultyString)
+    {
+        TextInfo ti = CultureInfo.CurrentCulture.TextInfo;
+        Collection<OutdoorEvents> response = new Collection<OutdoorEvents>();
+        if (Enum.TryParse(ti.ToTitleCase(difficultyString), out EventsDifficulty difficulty))
+        {
+            var sortieWithDifficulty = from events in _eventStorageService.LoadJson()
+                where events.Difficulty == difficulty
+                select events;
+            foreach (var events in sortieWithDifficulty)
+            {
+                response.Add(events);
+            }
         }
 
         return response;
