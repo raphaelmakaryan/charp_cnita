@@ -23,6 +23,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapGet("/", () => "Hello World!");
+app.MapGet("/weather", eventService.GetWeather);
 app.MapGet("/events", eventService.ApiEventsDefault);
 app.MapGet("/events/upcoming", eventService.ApiEventsUpcoming);
 
@@ -31,6 +32,7 @@ app.MapGet("/events/filter/difficulty/{difficulty}",
     (string difficulty) => eventService.ApiEventsFilterDifficulty(difficulty));
 
 app.MapGet("/event/{id}", (int id) => eventService.ApiEventsFilterId(id));
+
 
 app.MapControllers();
 app.Run();

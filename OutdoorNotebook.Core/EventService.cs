@@ -1,11 +1,14 @@
 using System.Collections.ObjectModel;
 using System.Globalization;
+using System.Net;
+using System.Text.Json;
 
 namespace OutdoorNotebook.Core;
 
 public class EventService
 {
     readonly EventStorageService _eventStorageService = new EventStorageService();
+    static readonly HttpClient client = new HttpClient();
 
     /**
      * Fonction pour ressortir les sorties qui sont futures
@@ -162,5 +165,20 @@ public class EventService
         }
 
         return response;
+    }
+
+    /**
+     * Fonction pour la route API "/weather", pour récupérer les données météo d'Annecy
+     */
+    public JsonDocument GetWeather()
+    {
+        WebRequest request =
+            WebRequest.Create(
+                "https://api.open-meteo.com/v1/forecast?latitude=45.9088&longitude=6.1257&hourly=temperature_2m");
+        WebResponse response = request.GetResponse();
+        Stream dataStream = response.GetResponseStream();
+        StreamReader reader = new StreamReader(dataStream);
+        string data = reader.ReadToEnd();
+        return JsonDocument.Parse(data);
     }
 }
