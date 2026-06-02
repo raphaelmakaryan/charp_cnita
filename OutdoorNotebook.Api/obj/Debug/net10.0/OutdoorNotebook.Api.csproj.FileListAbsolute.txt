@@ -64,3 +64,8 @@ C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Api\obj\Debug\net10
 C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Api\obj\Debug\net10.0\OutdoorNotebook.Api.pdb
 C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Api\obj\Debug\net10.0\OutdoorNotebook.Api.genruntimeconfig.cache
 C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Api\obj\Debug\net10.0\ref\OutdoorNotebook.Api.dll
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Api\obj\Debug\net10.0\OutdoorNotebook.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Api\bin\Debug\net10.0\Microsoft.OpenApi.dll
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
