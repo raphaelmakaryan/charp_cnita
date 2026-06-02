@@ -1,4 +1,4 @@
-﻿using OutdoorNotebook.Core;
+using OutdoorNotebook.Core;
 
 var storage = new EventStorageServiceAsync();
 var events = await storage.LoadEventsAsync();

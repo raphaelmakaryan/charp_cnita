@@ -1,0 +1,10 @@
+// See https://aka.ms/new-console-template for more information
+
+using OutdoorNotebook.Core;
+
+EventStorageServiceAsync eventStorageServiceAsync = new EventStorageServiceAsync();
+var eventsList = await eventStorageServiceAsync.LoadEventsAsync();
+foreach (var ev in eventsList)
+{
+    Console.WriteLine(OutdoorEvents.DisplayData(ev));
+}
