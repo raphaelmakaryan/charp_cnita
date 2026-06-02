@@ -2,21 +2,17 @@
 
 
 var weatherService = new FakeWeatherService();
-var start = DateTime.Now;
 var storage = new EventStorageServiceAsync();
 var events = await storage.LoadEventsAsync();
 foreach (var outdoorEvent in events)
 {
-    var weatherTasks = events
-        .Select(e => weatherService.GetWeatherAsync(e.Place))
-        .ToList();
-    var weatherResults = await Task.WhenAll(weatherTasks);
-    foreach (var weather in weatherResults)
+    try
     {
-        Console.WriteLine(
-            $"{weather.Location} — {weather.Summary} — {weather.TemperatureCelsius}°C"
-        );
+        var weather = await weatherService.GetWeatherAsync("ErreurVille");
+        Console.WriteLine(weather.Summary);
+    }
+    catch (InvalidOperationException ex)
+    {
+        Console.WriteLine($"Erreur météo : {ex.Message}");
     }
 }
-var duration = DateTime.Now - start;
-Console.WriteLine($"Durée : {duration.TotalSeconds:F2} secondes");
