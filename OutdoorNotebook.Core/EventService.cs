@@ -108,19 +108,17 @@ public class EventService
     /**
      *
      */
-    public Collection<OutdoorEvents> ApiEventsFilterPlace()
+    public Collection<OutdoorEvents> ApiEventsFilterPlace(String place)
     {
         Collection<OutdoorEvents> response = new Collection<OutdoorEvents>();
-        /*
-        var sortieDispo = from events in _eventStorageService.LoadJson()
-            where !events.IsFull(events.ParticipantsActual, events.MaxParticipants) && events.Date >= DateTime.Today
+        var sortieWithPlace = from events in _eventStorageService.LoadJson()
+            where events.Place == place
             select events;
-        foreach (var events in sortieDispo)
+        foreach (var events in sortieWithPlace)
         {
             response.Add(events);
         }
 
-        */
         return response;
     }
 }

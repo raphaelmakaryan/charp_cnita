@@ -10,3 +10,15 @@
 /home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/Debug/net10.0/refint/OutdoorNotebook.Core.dll
 /home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/Debug/net10.0/OutdoorNotebook.Core.pdb
 /home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/Debug/net10.0/ref/OutdoorNotebook.Core.dll
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Core\bin\Debug\net10.0\OutdoorNotebook.Core.deps.json
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Core\bin\Debug\net10.0\OutdoorNotebook.Core.dll
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Core\bin\Debug\net10.0\OutdoorNotebook.Core.pdb
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Core\obj\Debug\net10.0\OutdoorNotebook.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Core\obj\Debug\net10.0\OutdoorNotebook.Core.AssemblyInfoInputs.cache
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Core\obj\Debug\net10.0\OutdoorNotebook.Core.AssemblyInfo.cs
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Core\obj\Debug\net10.0\OutdoorNotebook.Core.csproj.CoreCompileInputs.cache
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Core\obj\Debug\net10.0\OutdoorNotebook.Core.sourcelink.json
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Core\obj\Debug\net10.0\OutdoorNotebook.Core.dll
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Core\obj\Debug\net10.0\refint\OutdoorNotebook.Core.dll
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Core\obj\Debug\net10.0\OutdoorNotebook.Core.pdb
+C:\Users\tsuki\Documents\CODES\GITHUB\csharp\OutdoorNotebook.Core\obj\Debug\net10.0\ref\OutdoorNotebook.Core.dll

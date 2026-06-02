@@ -6,14 +6,40 @@ namespace OutdoorNotebook.Core;
 
 public class EventStorageService
 {
-    private readonly string _fileName = "data/events.json";
+    private const string RelativeFileName = "data/events.json";
 
     /**
      * Fonction pour afficher dans la console la lecture du JSON
      */
     public void ReadJson(JsonElement dataJson)
     {
-        System.Console.WriteLine(dataJson);
+        Console.WriteLine(dataJson);
+    }
+
+    /**
+     * Fonction pour aller chercher le JSON
+     */
+    private static string ResolveJsonPath()
+    {
+        string[] searchRoots = [AppContext.BaseDirectory, Directory.GetCurrentDirectory()];
+
+        foreach (string root in searchRoots)
+        {
+            DirectoryInfo? currentDirectory = new DirectoryInfo(root);
+
+            while (currentDirectory is not null)
+            {
+                string candidate = Path.Combine(currentDirectory.FullName, RelativeFileName);
+                if (File.Exists(candidate))
+                {
+                    return candidate;
+                }
+
+                currentDirectory = currentDirectory.Parent;
+            }
+        }
+
+        throw new FileNotFoundException($"Impossible de trouver '{RelativeFileName}'.", RelativeFileName);
     }
 
     /**
@@ -23,7 +49,7 @@ public class EventStorageService
     {
         Collection<OutdoorEvents> allEvents = new Collection<OutdoorEvents>();
         // récupérer tout le fichier
-        string data = File.ReadAllText(_fileName);
+        string data = File.ReadAllText(ResolveJsonPath());
         // je le parse en json
         using JsonDocument doc = JsonDocument.Parse(data);
         // je recupere toute les data
@@ -39,8 +65,10 @@ public class EventStorageService
             DateTime date = DateTime.TryParse(dateString, out DateTime parsedDate)
                 ? parsedDate
                 : DateTime.MinValue;
-            EventsDifficulty difficulty = (EventsDifficulty)Enum.Parse(typeof(EventsDifficulty),
-                events.GetProperty("Difficulty").GetString());
+            string difficultyString = events.GetProperty("Difficulty").GetString() ?? nameof(EventsDifficulty.Normal);
+            EventsDifficulty difficulty = Enum.TryParse(difficultyString, out EventsDifficulty parsedDifficulty)
+                ? parsedDifficulty
+                : EventsDifficulty.Normal;
             allEvents.Add(new OutdoorEvents(events.GetProperty("Name").GetString() ?? "Pas de nom",
                 date, events.GetProperty("Place").GetString() ?? "Pas de lieu",
                 events.GetProperty("MaxParticipants").GetInt32(),

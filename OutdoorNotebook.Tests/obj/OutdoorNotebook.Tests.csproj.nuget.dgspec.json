@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/home/user/Documents/COURS/C#/OutdoorNotebook.Tests/OutdoorNotebook.Tests.csproj": {}
+    "C:\\Users\\tsuki\\Documents\\CODES\\GITHUB\\csharp\\OutdoorNotebook.Tests\\OutdoorNotebook.Tests.csproj": {}
   },
   "projects": {
-    "/home/user/Documents/COURS/C#/OutdoorNotebook.Core/OutdoorNotebook.Core.csproj": {
+    "C:\\Users\\tsuki\\Documents\\CODES\\GITHUB\\csharp\\OutdoorNotebook.Core\\OutdoorNotebook.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/user/Documents/COURS/C#/OutdoorNotebook.Core/OutdoorNotebook.Core.csproj",
+        "projectUniqueName": "C:\\Users\\tsuki\\Documents\\CODES\\GITHUB\\csharp\\OutdoorNotebook.Core\\OutdoorNotebook.Core.csproj",
         "projectName": "OutdoorNotebook.Core",
-        "projectPath": "/home/user/Documents/COURS/C#/OutdoorNotebook.Core/OutdoorNotebook.Core.csproj",
-        "packagesPath": "/home/user/.nuget/packages/",
-        "outputPath": "/home/user/Documents/COURS/C#/OutdoorNotebook.Core/obj/",
+        "projectPath": "C:\\Users\\tsuki\\Documents\\CODES\\GITHUB\\csharp\\OutdoorNotebook.Core\\OutdoorNotebook.Core.csproj",
+        "packagesPath": "C:\\Users\\tsuki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tsuki\\Documents\\CODES\\GITHUB\\csharp\\OutdoorNotebook.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/user/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\tsuki\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "/usr/lib/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -60,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.108/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.204/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -338,31 +337,30 @@
         }
       }
     },
-    "/home/user/Documents/COURS/C#/OutdoorNotebook.Tests/OutdoorNotebook.Tests.csproj": {
+    "C:\\Users\\tsuki\\Documents\\CODES\\GITHUB\\csharp\\OutdoorNotebook.Tests\\OutdoorNotebook.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/user/Documents/COURS/C#/OutdoorNotebook.Tests/OutdoorNotebook.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\tsuki\\Documents\\CODES\\GITHUB\\csharp\\OutdoorNotebook.Tests\\OutdoorNotebook.Tests.csproj",
         "projectName": "OutdoorNotebook.Tests",
-        "projectPath": "/home/user/Documents/COURS/C#/OutdoorNotebook.Tests/OutdoorNotebook.Tests.csproj",
-        "packagesPath": "/home/user/.nuget/packages/",
-        "outputPath": "/home/user/Documents/COURS/C#/OutdoorNotebook.Tests/obj/",
+        "projectPath": "C:\\Users\\tsuki\\Documents\\CODES\\GITHUB\\csharp\\OutdoorNotebook.Tests\\OutdoorNotebook.Tests.csproj",
+        "packagesPath": "C:\\Users\\tsuki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tsuki\\Documents\\CODES\\GITHUB\\csharp\\OutdoorNotebook.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/user/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\tsuki\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "/usr/lib/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/user/Documents/COURS/C#/OutdoorNotebook.Core/OutdoorNotebook.Core.csproj": {
-                "projectPath": "/home/user/Documents/COURS/C#/OutdoorNotebook.Core/OutdoorNotebook.Core.csproj"
+              "C:\\Users\\tsuki\\Documents\\CODES\\GITHUB\\csharp\\OutdoorNotebook.Core\\OutdoorNotebook.Core.csproj": {
+                "projectPath": "C:\\Users\\tsuki\\Documents\\CODES\\GITHUB\\csharp\\OutdoorNotebook.Core\\OutdoorNotebook.Core.csproj"
               }
             }
           }
@@ -377,7 +375,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -416,7 +414,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.108/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.204/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
