@@ -17,4 +17,6 @@ app.MapGet("/events/filter/difficulty",
 app.MapGet("/events/filter/difficulty/{difficulty}",
     (string difficulty) => eventService.ApiEventsFilterDifficulty(difficulty));
 
+app.MapGet("/event/{id}", (int id) => eventService.ApiEventsFilterId(id));
+
 app.Run();

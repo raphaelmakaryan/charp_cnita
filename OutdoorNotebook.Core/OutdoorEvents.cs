@@ -3,6 +3,11 @@ namespace OutdoorNotebook.Core;
 public class OutdoorEvents
 {
     /**
+     * ID des événements
+     */
+    private int _id;
+
+    /**
      * Nom des événements
      */
     private string _name;
@@ -50,9 +55,10 @@ public class OutdoorEvents
     /**
      * Constructeur d'un event
      */
-    public OutdoorEvents(string name, DateTime date, string place, int maxParticipants, int participantsActual,
+    public OutdoorEvents(int id, string name, DateTime date, string place, int maxParticipants, int participantsActual,
         string? description, EventsDifficulty difficulty, int duration, string meetingPlace)
     {
+        _id = id;
         _name = name;
         _date = date;
         _place = place;
@@ -62,6 +68,12 @@ public class OutdoorEvents
         _difficulty = difficulty;
         _duration = duration;
         _meetingPlace = meetingPlace;
+    }
+
+    public int Id
+    {
+        get => _id;
+        set => _id = value;
     }
 
     public string Name
@@ -116,7 +128,8 @@ public class OutdoorEvents
      */
     public string DisplayData(OutdoorEvents outdoorEvents)
     {
-        return "- " + outdoorEvents.Name + " — " + outdoorEvents.Place + " — " + outdoorEvents.Date + " — " +
+        return outdoorEvents.Id + " - " + outdoorEvents.Name + " — " + outdoorEvents.Place + " — " +
+               outdoorEvents.Date + " — " +
                outdoorEvents.ParticipantsActual + "/" + outdoorEvents.MaxParticipants + " participants  — " +
                outdoorEvents.GetRemainingPlaces(outdoorEvents.ParticipantsActual, outdoorEvents.MaxParticipants) +
                " places restantes — " +

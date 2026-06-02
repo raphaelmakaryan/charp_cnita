@@ -1,6 +1,7 @@
 {
   "events": [
     {
+      "Id": 0,
       "Name": "Randonnée hivernale au Semnoz",
       "Date": "02-15-2024",
       "Place": "Semnoz",
@@ -12,6 +13,7 @@
       "MeetingPlace": "Parking du Semnoz"
     },
     {
+      "Id": 1,
       "Name": "Sortie raquettes à la Clusaz",
       "Date": "01-20-2025",
       "Place": "La Clusaz",
@@ -23,6 +25,7 @@
       "MeetingPlace": "Office de tourisme de La Clusaz"
     },
     {
+      "Id": 2,
       "Name": "Cours de ski de fond",
       "Date": "03-10-2025",
       "Place": "Le Grand-Bornand",
@@ -34,6 +37,7 @@
       "MeetingPlace": "Station de ski du Grand-Bornand, point de location"
     },
     {
+      "Id": 3,
       "Name": "Randonnée au Parmelan",
       "Date": "05-03-2025",
       "Place": "Annecy",
@@ -45,6 +49,7 @@
       "MeetingPlace": "Parking du départ de la randonnée (Col de la Forclaz)"
     },
     {
+      "Id": 4,
       "Name": "Kayak sur le lac",
       "Date": "06-02-2025",
       "Place": "Semnoz",
@@ -56,6 +61,7 @@
       "MeetingPlace": "Base nautique du Semnoz"
     },
     {
+      "Id": 5,
       "Name": "Sortie vélo autour du lac",
       "Date": "10-03-2025",
       "Place": "Poisy",
@@ -67,6 +73,7 @@
       "MeetingPlace": "Parking de la piste cyclable de Poisy"
     },
     {
+      "Id": 6,
       "Name": "Jogging matinal",
       "Date": "06-01-2026",
       "Place": "Epagny",
@@ -78,6 +85,7 @@
       "MeetingPlace": "Parking de la plage d'Epagny"
     },
     {
+      "Id": 7,
       "Name": "Escalade à la Tourrette",
       "Date": "06-15-2026",
       "Place": "La Tourrette",
@@ -89,6 +97,7 @@
       "MeetingPlace": "Parking du site d'escalade de la Tourrette"
     },
     {
+      "Id": 8,
       "Name": "Yoga au bord du lac",
       "Date": "06-10-2026",
       "Place": "Annecy",
@@ -100,6 +109,7 @@
       "MeetingPlace": "Parc de l'Impérial, pelouse près du lac"
     },
     {
+      "Id": 9,
       "Name": "Course d'orientation en forêt",
       "Date": "06-20-2026",
       "Place": "Forêt de la Mandallaz",
@@ -111,6 +121,7 @@
       "MeetingPlace": "Parking de la forêt de la Mandallaz"
     },
     {
+      "Id": 10,
       "Name": "Pique-nique au Semnoz",
       "Date": "06-25-2026",
       "Place": "Semnoz",
@@ -122,6 +133,7 @@
       "MeetingPlace": "Aire de pique-nique du Semnoz"
     },
     {
+      "Id": 11,
       "Name": "Trail nocturne",
       "Date": "07-12-2026",
       "Place": "Col de la Forclaz",
@@ -133,6 +145,7 @@
       "MeetingPlace": "Parking du Col de la Forclaz"
     },
     {
+      "Id": 12,
       "Name": "Atelier photo nature",
       "Date": "07-05-2026",
       "Place": "Parc de la Tourrette",
@@ -144,6 +157,7 @@
       "MeetingPlace": "Entrée principale du Parc de la Tourrette"
     },
     {
+      "Id": 13,
       "Name": "Marche nordique",
       "Date": "07-08-2026",
       "Place": "Seynod",
@@ -155,6 +169,7 @@
       "MeetingPlace": "Parking du centre sportif de Seynod"
     },
     {
+      "Id": 14,
       "Name": "Sortie spéléologie",
       "Date": "07-18-2026",
       "Place": "Grotte de la Diau",
@@ -166,6 +181,7 @@
       "MeetingPlace": "Parking de la Grotte de la Diau"
     },
     {
+      "Id": 15,
       "Name": "Cours de paddle",
       "Date": "07-22-2026",
       "Place": "Plage d'Albigny",
@@ -177,6 +193,7 @@
       "MeetingPlace": "Plage d'Albigny, point de location"
     },
     {
+      "Id": 16,
       "Name": "Randonnée aquatique",
       "Date": "07-30-2026",
       "Place": "Gorges du Fier",
@@ -188,6 +205,7 @@
       "MeetingPlace": "Parking des Gorges du Fier"
     },
     {
+      "Id": 17,
       "Name": "Concours de pêche",
       "Date": "08-05-2026",
       "Place": "Lac d'Annecy",
@@ -199,6 +217,7 @@
       "MeetingPlace": "Quai de pêche de Talloires"
     },
     {
+      "Id": 18,
       "Name": "Via ferrata à Thônes",
       "Date": "08-15-2026",
       "Place": "Thônes",
@@ -210,6 +229,7 @@
       "MeetingPlace": "Escalier de la via ferrata de Thônes"
     },
     {
+      "Id": 19,
       "Name": "Balade en montgolfière",
       "Date": "09-10-2026",
       "Place": "Annecy",

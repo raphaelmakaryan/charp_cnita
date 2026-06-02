@@ -63,15 +63,16 @@ public class EventService
     {
         return
         [
-            new OutdoorEvents("Randonnée au Parmelan", DateTime.Today.AddDays(-1), "Annecy", 12, 3, null,
+            new OutdoorEvents(0, "Randonnée au Parmelan", DateTime.Today.AddDays(-1), "Annecy", 12, 3, null,
                 EventsDifficulty.Difficile, 150, "Porte de la chappelle"),
-            new OutdoorEvents("Sortie vélo autour du lac", DateTime.Today.AddDays(+2), "Annecy", 8, 8, null,
+            new OutdoorEvents(1, "Sortie vélo autour du lac", DateTime.Today.AddDays(+2), "Annecy", 8, 8, null,
                 EventsDifficulty.Facile, 100, "Porte de la chappelle"),
-            new OutdoorEvents("Kayak", DateTime.Today.AddDays(+10), "Cran-Gevrier", 20, 5, null,
+            new OutdoorEvents(2, "Kayak", DateTime.Today.AddDays(+10), "Cran-Gevrier", 20, 5, null,
                 EventsDifficulty.Normal, 300, "Porte de la chappelle"),
-            new OutdoorEvents("Jogging", DateTime.Today.AddDays(+1), "Annecy", 12, 12, null, EventsDifficulty.Facile,
+            new OutdoorEvents(3, "Jogging", DateTime.Today.AddDays(+1), "Annecy", 12, 12, null, EventsDifficulty.Facile,
                 200, "Porte de la chappelle"),
-            new OutdoorEvents("Canoe", DateTime.Today.AddDays(+5), "Annecy", 12, 0, null, EventsDifficulty.Normal, 300,
+            new OutdoorEvents(4, "Canoe", DateTime.Today.AddDays(+5), "Annecy", 12, 0, null, EventsDifficulty.Normal,
+                300,
                 "Porte de la chappelle")
         ];
     }
@@ -125,6 +126,9 @@ public class EventService
         return response;
     }
 
+    /**
+     * Fonction pour la route API "/events/filter/difficulty/{difficulty}", filtrage par difficulté
+     */
     public Collection<OutdoorEvents> ApiEventsFilterDifficulty(String difficultyString)
     {
         TextInfo ti = CultureInfo.CurrentCulture.TextInfo;
@@ -138,6 +142,23 @@ public class EventService
             {
                 response.Add(events);
             }
+        }
+
+        return response;
+    }
+
+    /**
+     * Fonction pour la route API "/event/{id}", filtrage par id
+     */
+    public Collection<OutdoorEvents> ApiEventsFilterId(int id)
+    {
+        Collection<OutdoorEvents> response = new Collection<OutdoorEvents>();
+        var sortieWithId = from events in _eventStorageService.LoadJson()
+            where events.Id == id
+            select events;
+        foreach (var events in sortieWithId)
+        {
+            response.Add(events);
         }
 
         return response;
