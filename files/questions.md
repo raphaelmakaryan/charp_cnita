@@ -31,62 +31,79 @@
 
 6. Quel est l’avantage d’une List<OutdoorEvent> par rapport à plusieurs variables
    indépendantes ?
-- Que toute les variables sont stocké dans une liste, qu'on peut boucler donc moins de code, et plus maintenanable car il est stocké dans une liste
+
+- Que toute les variables sont stocké dans une liste, qu'on peut boucler donc moins de code, et plus maintenanable car
+  il est stocké dans une liste
 
 7. Expliquer oralement :
-   1. Qu’est-ce qu’une classe ?
-      - Une classe est une structuration essentiellement en POO, qui regroupe des methodes et des attributs
-   2. Qu’est-ce qu’une propriété ?
-      - Une propriété c'est une variable d'une class
-   3. Qu’est-ce qu’une méthode ?
-      - Une méthode c'est une fonction interne a une class 
-   4. Pourquoi C# demande-t-il des types explicites ?
-      - Comme a la java, pour l'optimisation, des types défini evite d'avir des erreur d'execution, etcc  
-   5. À quoi sert string? ?
-      - Il sert a avoir un string au contenu nullable, pas obligatoire
-   6. À quoi sert LINQ ?
-      - LINQ permet de faire des requetes sur des variables, comme en sql
-   7. Que contient le fichier .csproj ?
-      - Il contient le type de sortie, la version du dotnet, etc..
+    1. Qu’est-ce qu’une classe ?
+        - Une classe est une structuration essentiellement en POO, qui regroupe des methodes et des attributs
+    2. Qu’est-ce qu’une propriété ?
+        - Une propriété c'est une variable d'une class
+    3. Qu’est-ce qu’une méthode ?
+        - Une méthode c'est une fonction interne a une class
+    4. Pourquoi C# demande-t-il des types explicites ?
+        - Comme a la java, pour l'optimisation, des types défini evite d'avir des erreur d'execution, etcc
+    5. À quoi sert string? ?
+        - Il sert a avoir un string au contenu nullable, pas obligatoire
+    6. À quoi sert LINQ ?
+        - LINQ permet de faire des requetes sur des variables, comme en sql
+    7. Que contient le fichier .csproj ?
+        - Il contient le type de sortie, la version du dotnet, etc..
 
 
 8. Pourquoi déplacer OutdoorEvent hors du projet console ?
+
 - Pour séparé la console de la logique métier ?
 
 9. Quelle partie du code serait réutilisable si demain on remplaçait la console par une API web
+
 - Les données, donc la collection ainsi que les fonctions
 
 10. Mes choix :
+
 - avez-vous utilisé un constructeur ?
-  - oui
+    - oui
 - avez-vous utilisé des valeurs par défaut?
-  - pas dans la class mais une fonction qui le fais
+    - pas dans la class mais une fonction qui le fais
 - où avez-vous mis la logique IsFull() ?
-  - oui
+    - oui
 
 11. Pourquoi tester la validation est-il plus intéressant que de tester simplement un affichage console
     ?
-- Car il permet d'être sûr que ce qu'on souhaitait faire est conforme, afin de ne pas avoir de surprise tout au long du projet
 
-12. Expliquer : 
+- Car il permet d'être sûr que ce qu'on souhaitait faire est conforme, afin de ne pas avoir de surprise tout au long du
+  projet
+
+12. Expliquer :
     1. Pourquoi séparer console et cœur métier ?
-       - Afin de separer la logique et l'affichage, avoir une structure clair et propre
+        - Afin de separer la logique et l'affichage, avoir une structure clair et propre
     2. Qu’est-ce qu’un service métier ?
         - Le service métier est la ou toute la logique passe
     3. Pourquoi le service ne doit-il pas écrire dans la console ?
-       - Car on part du principe que le service s'occupe seulement de la logique, afin de laisser la console d'ecrire lui
+        - Car on part du principe que le service s'occupe seulement de la logique, afin de laisser la console d'ecrire
+          lui
     4. Qu’est-ce qu’un test unitaire ?
-       - c'est un test qui vise a tester une fonction, une méthode précise isolé du reste
+        - c'est un test qui vise a tester une fonction, une méthode précise isolé du reste
     5. Qu’est-ce que la structure Arrange / Act / Assert?
-       - Arrange : récupération des données, Act : logique et condition, Assert : vérification
+        - Arrange : récupération des données, Act : logique et condition, Assert : vérification
     6. Qu’avez-vous trouvé difficile dans l’écriture des tests ?
         - La mise en place et les questions posé pas clairement
 
 
-13. Quelle différence faites-vous entre : dotnet run --project OutdoorNotebook.Console | dotnet run --project OutdoorNotebook.Api ?
+13. Quelle différence faites-vous entre : dotnet run --project OutdoorNotebook.Console | dotnet run --project
+    OutdoorNotebook.Api ?
+
 - La console, c'est l'application en elle même, tandis que l'api, c'est le lancement d'un serveur
 
 
 14. Qu’avez-vous compris de spécifique à C# et .NET que vous ne voyiez pas forcément
     dans les autres langages ?
-- Ce qui est spécifique à C# et .NET, il y'a LINQ, de faire des requêtes directement dans le code C#, 
+
+- Ce qui est spécifique à C# et .NET, il y'a LINQ, de faire des requêtes directement dans le code C#
+
+
+15. Expliquez avec vos mots la différence entre : List<OutdoorEvent> | Task<List<OutdoorEvent>>
+
+- List<OutdoorEvent> c'est une liste d'outdoorEvent qui synchrone, tandis que Task<List<OutdoorEvent>> c'est une tâche
+  qui va retourner une liste d'outdoorEvent, donc asynchrone
