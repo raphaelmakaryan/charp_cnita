@@ -112,5 +112,12 @@
 
 - Car elle ne retourne rien, elle sauvegarde juste les données
 
-17. Pourquoi cette ligne ne donne-t-elle pas directement une liste ? var events = storage.LoadEventsAsync("data/events.json");
+17. Pourquoi cette ligne ne donne-t-elle pas directement une liste ? var events = storage.LoadEventsAsync("
+    data/events.json");
+
 - Parce que l'appel de la fonction ne comporte pas le await, donc elle retourne une tâche, et non la liste directement
+
+18. Pourquoi le test lui-même est-il marqué avec `async Task`?
+
+- Car il utiliser des fonctions asynchrone, et pour pouvoir utiliser le await, il faut que la fonction soit async, et
+  retourne une tâche
