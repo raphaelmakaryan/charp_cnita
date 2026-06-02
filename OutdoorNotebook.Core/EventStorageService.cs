@@ -73,7 +73,8 @@ public class EventStorageService
                 date, events.GetProperty("Place").GetString() ?? "Pas de lieu",
                 events.GetProperty("MaxParticipants").GetInt32(),
                 events.GetProperty("ParticipantsActual").GetInt32(),
-                events.GetProperty("Description").GetString() ?? "Aucune description", difficulty
+                events.GetProperty("Description").GetString() ?? "Aucune description", difficulty,
+                events.GetProperty("Duration").GetInt32()
             ));
         }
 

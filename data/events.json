@@ -7,7 +7,8 @@
       "MaxParticipants": 10,
       "ParticipantsActual": 8,
       "Description": "Randonnée en raquettes dans la neige. Paysages époustouflants.",
-      "Difficulty": "Difficile"
+      "Difficulty": "Difficile",
+      "Duration": 50
     },
     {
       "Name": "Sortie raquettes à la Clusaz",
@@ -16,7 +17,8 @@
       "MaxParticipants": 15,
       "ParticipantsActual": 12,
       "Description": "Balade en raquettes avec guide. Niveau intermédiaire.",
-      "Difficulty": "Normal"
+      "Difficulty": "Normal",
+      "Duration": 100
     },
     {
       "Name": "Cours de ski de fond",
@@ -25,7 +27,8 @@
       "MaxParticipants": 12,
       "ParticipantsActual": 10,
       "Description": "Initiation au ski de fond sur les pistes du Grand-Bornand.",
-      "Difficulty": "Facile"
+      "Difficulty": "Facile",
+      "Duration": 150
     },
     {
       "Name": "Randonnée au Parmelan",
@@ -34,7 +37,8 @@
       "MaxParticipants": 12,
       "ParticipantsActual": 3,
       "Description": "Randonnée en montagne avec vue sur le lac. Prévoir de bonnes chaussures.",
-      "Difficulty": "Difficile"
+      "Difficulty": "Difficile",
+      "Duration": 200
     },
     {
       "Name": "Kayak sur le lac",
@@ -43,7 +47,8 @@
       "MaxParticipants": 20,
       "ParticipantsActual": 5,
       "Description": "Session de kayak en groupe sur les eaux calmes du lac d'Annecy.",
-      "Difficulty": "Normal"
+      "Difficulty": "Normal",
+      "Duration": 200
     },
     {
       "Name": "Sortie vélo autour du lac",
@@ -52,7 +57,8 @@
       "MaxParticipants": 10,
       "ParticipantsActual": 10,
       "Description": "Parcours de 40 km autour du lac d'Annecy. Réservé aux cyclistes confirmés.",
-      "Difficulty": "Facile"
+      "Difficulty": "Facile",
+      "Duration": 100
     },
     {
       "Name": "Jogging matinal",
@@ -61,7 +67,8 @@
       "MaxParticipants": 12,
       "ParticipantsActual": 2,
       "Description": "Petite sortie tranquille le long des berges du lac. Ouvert à tous les niveaux.",
-      "Difficulty": "Normal"
+      "Difficulty": "Normal",
+      "Duration": 300
     },
     {
       "Name": "Escalade à la Tourrette",
@@ -70,7 +77,8 @@
       "MaxParticipants": 8,
       "ParticipantsActual": 4,
       "Description": "Séance d'escalade encadrée pour débutants. Matériel fourni.",
-      "Difficulty": "Difficile"
+      "Difficulty": "Difficile",
+      "Duration": 150
     },
     {
       "Name": "Yoga au bord du lac",
@@ -79,7 +87,8 @@
       "MaxParticipants": 15,
       "ParticipantsActual": 12,
       "Description": "Séance de yoga en plein air avec vue sur les montagnes. Apportez votre tapis.",
-      "Difficulty": "Facile"
+      "Difficulty": "Facile",
+      "Duration": 400
     },
     {
       "Name": "Course d'orientation en forêt",
@@ -88,7 +97,8 @@
       "MaxParticipants": 6,
       "ParticipantsActual": 6,
       "Description": "Parcours chronométré en forêt. Réservé aux membres du club.",
-      "Difficulty": "Normal"
+      "Difficulty": "Normal",
+      "Duration": 600
     },
     {
       "Name": "Pique-nique au Semnoz",
@@ -97,7 +107,8 @@
       "MaxParticipants": 30,
       "ParticipantsActual": 10,
       "Description": "Pique-nique convivial au sommet du Semnoz. Chaque participant apporte son repas.",
-      "Difficulty": "Facile"
+      "Difficulty": "Facile",
+      "Duration": 100
     },
     {
       "Name": "Trail nocturne",
@@ -106,7 +117,8 @@
       "MaxParticipants": 15,
       "ParticipantsActual": 5,
       "Description": "Course à pied de nuit avec frontales obligatoires. Parcours de 10 km.",
-      "Difficulty": "Difficile"
+      "Difficulty": "Difficile",
+      "Duration": 200
     },
     {
       "Name": "Atelier photo nature",
@@ -115,7 +127,8 @@
       "MaxParticipants": 8,
       "ParticipantsActual": 3,
       "Description": "Atelier pour apprendre à photographier la faune et la flore locales.",
-      "Difficulty": "Facile"
+      "Difficulty": "Facile",
+      "Duration": 300
     },
     {
       "Name": "Marche nordique",
@@ -124,7 +137,8 @@
       "MaxParticipants": 20,
       "ParticipantsActual": 18,
       "Description": "Marche dynamique avec bâtons. Adapté à tous les niveaux.",
-      "Difficulty": "Normal"
+      "Difficulty": "Normal",
+      "Duration": 200
     },
     {
       "Name": "Sortie spéléologie",
@@ -133,7 +147,8 @@
       "MaxParticipants": 5,
       "ParticipantsActual": 2,
       "Description": "Exploration de grottes encadrée par des professionnels. Équipement fourni.",
-      "Difficulty": "Difficile"
+      "Difficulty": "Difficile",
+      "Duration": 250
     },
     {
       "Name": "Cours de paddle",
@@ -142,7 +157,8 @@
       "MaxParticipants": 10,
       "ParticipantsActual": 4,
       "Description": "Initiation au paddle sur le lac d'Annecy. Accessible aux débutants.",
-      "Difficulty": "Facile"
+      "Difficulty": "Facile",
+      "Duration": 600
     },
     {
       "Name": "Randonnée aquatique",
@@ -151,7 +167,8 @@
       "MaxParticipants": 12,
       "ParticipantsActual": 8,
       "Description": "Randonnée en eau vive avec passages dans l'eau. Prévoir maillot de bain et chaussures de randonnée.",
-      "Difficulty": "Normal"
+      "Difficulty": "Normal",
+      "Duration": 100
     },
     {
       "Name": "Concours de pêche",
@@ -160,7 +177,8 @@
       "MaxParticipants": 25,
       "ParticipantsActual": 20,
       "Description": "Concours de pêche amateur. Prêt de cannes possible sur place.",
-      "Difficulty": "Facile"
+      "Difficulty": "Facile",
+      "Duration": 200
     },
     {
       "Name": "Via ferrata à Thônes",
@@ -169,7 +187,8 @@
       "MaxParticipants": 6,
       "ParticipantsActual": 3,
       "Description": "Parcours de via ferrata avec vue imprenable. Équipement fourni.",
-      "Difficulty": "Difficile"
+      "Difficulty": "Difficile",
+      "Duration": 250
     },
     {
       "Name": "Balade en montgolfière",
@@ -178,7 +197,8 @@
       "MaxParticipants": 4,
       "ParticipantsActual": 2,
       "Description": "Vol en montgolfière au-dessus du lac d'Annecy. Réservation obligatoire.",
-      "Difficulty": "Facile"
+      "Difficulty": "Facile",
+      "Duration": 200
     }
   ]
 }

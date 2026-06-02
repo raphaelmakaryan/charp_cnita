@@ -38,10 +38,15 @@ public class OutdoorEvents
     private EventsDifficulty _difficulty;
 
     /**
+     * Durée de l'event, en minutes
+     */
+    private int _duration;
+
+    /**
      * Constructeur d'un event
      */
     public OutdoorEvents(string name, DateTime date, string place, int maxParticipants, int participantsActual,
-        string? description, EventsDifficulty difficulty)
+        string? description, EventsDifficulty difficulty, int duration)
     {
         _name = name;
         _date = date;
@@ -50,6 +55,7 @@ public class OutdoorEvents
         _participantsActual = participantsActual;
         _description = description;
         _difficulty = difficulty;
+        _duration = duration;
     }
 
     public string Name
@@ -87,6 +93,12 @@ public class OutdoorEvents
 
     public string? Description => _description;
 
+    public int Duration
+    {
+        get => _duration;
+        set => _duration = value;
+    }
+
     /**
      * Fonction pour retourner en propre les valeurs
      */
@@ -97,7 +109,8 @@ public class OutdoorEvents
                outdoorEvents.GetRemainingPlaces(outdoorEvents.ParticipantsActual, outdoorEvents.MaxParticipants) +
                " places restantes — " +
                outdoorEvents.IsFull(outdoorEvents.ParticipantsActual, outdoorEvents.MaxParticipants) + " — " +
-               outdoorEvents._description + " — Difficulté : " + outdoorEvents._difficulty;
+               outdoorEvents._description + " — Difficulté : " + outdoorEvents._difficulty + " — Durée : " +
+               outdoorEvents.Duration;
     }
 
 
