@@ -11,19 +11,19 @@ Collection<OutdoorEvents> data = eventStorageService.LoadJson();
 
 foreach (var events in data)
 {
-    Console.WriteLine(events.DisplayData(events));
+    Console.WriteLine(OutdoorEvents.DisplayData(events));
 }
 
 Console.WriteLine(Tools.Separation());
 foreach (var outdoorEvents in eventService.UpComingRelease(data))
 {
-    Console.WriteLine(outdoorEvents.DisplayData(outdoorEvents));
+    Console.WriteLine(OutdoorEvents.DisplayData(outdoorEvents));
 }
 
 Console.WriteLine(Tools.Separation());
 foreach (var outdoorEvents in eventService.FullReleases(data))
 {
-    Console.WriteLine(outdoorEvents.DisplayData(outdoorEvents));
+    Console.WriteLine(OutdoorEvents.DisplayData(outdoorEvents));
 }
 
 Console.WriteLine(Tools.Separation());

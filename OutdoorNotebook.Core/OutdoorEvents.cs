@@ -13,9 +13,9 @@ public class OutdoorEvents
     private string _name;
 
     /**
- * Date de l'event
+ * Date de l'évent
  */
-    private DateTime _date;
+    private readonly DateTime _date;
 
     /**
      * Lieu des événements
@@ -25,17 +25,17 @@ public class OutdoorEvents
     /**
      * Description des événements, nullable
      */
-    private readonly string? _description;
+    private string? _description;
 
     /**
      * Nombre max de participants
      */
-    private int _maxParticipants;
+    private readonly int _maxParticipants;
 
     /**
      * Nombre actuel de participants
      */
-    private int _participantsActual;
+    private readonly int _participantsActual;
 
     /**
      * Niveau de difficulté
@@ -43,7 +43,7 @@ public class OutdoorEvents
     private EventsDifficulty _difficulty;
 
     /**
-     * Durée de l'event, en minutes
+     * Durée de l'évent, en minutes
      */
     private int _duration;
 
@@ -85,7 +85,11 @@ public class OutdoorEvents
     /**
      * Date des événements
      */
-    public DateTime Date { get; set; }
+    public DateTime Date
+    {
+        get => _date;
+        set;
+    }
 
     public string Place
     {
@@ -102,14 +106,26 @@ public class OutdoorEvents
     /**
      * Nombre max de participants
      */
-    public int MaxParticipants { get; set; }
+    public int MaxParticipants
+    {
+        get => _maxParticipants;
+        set;
+    }
 
     /**
      * Nombre actuel de participants
      */
-    public int ParticipantsActual { get; set; }
+    public int ParticipantsActual
+    {
+        get => _participantsActual;
+        set;
+    }
 
-    public string? Description => _description;
+    public string? Description
+    {
+        get => _description;
+        set => _description = value;
+    }
 
     public int Duration
     {
@@ -126,17 +142,17 @@ public class OutdoorEvents
     /**
      * Fonction pour retourner en propre les valeurs
      */
-    public string DisplayData(OutdoorEvents outdoorEvents)
+    public static string DisplayData(OutdoorEvents outdoorEvents)
     {
-        return outdoorEvents.Id + " - " + outdoorEvents.Name + " — " + outdoorEvents.Place + " — " +
-               outdoorEvents.Date + " — " +
-               outdoorEvents.ParticipantsActual + "/" + outdoorEvents.MaxParticipants + " participants  — " +
-               outdoorEvents.GetRemainingPlaces(outdoorEvents.ParticipantsActual, outdoorEvents.MaxParticipants) +
+        return outdoorEvents._id + " - " + outdoorEvents._name + " — " + outdoorEvents._place + " — " +
+               outdoorEvents._date + " — " +
+               outdoorEvents._participantsActual + "/" + outdoorEvents._maxParticipants + " participants  — " +
+               outdoorEvents.GetRemainingPlaces(outdoorEvents._participantsActual, outdoorEvents._maxParticipants) +
                " places restantes — " +
-               outdoorEvents.IsFull(outdoorEvents.ParticipantsActual, outdoorEvents.MaxParticipants) + " — " +
+               outdoorEvents.IsFull(outdoorEvents._participantsActual, outdoorEvents._maxParticipants) + " — " +
                outdoorEvents._description + " — Difficulté : " + outdoorEvents._difficulty + " — Durée : " +
-               outdoorEvents.Duration + " — RDV : " +
-               outdoorEvents.MeetingPlace;
+               outdoorEvents._duration + " — RDV : " +
+               outdoorEvents._meetingPlace;
     }
 
 

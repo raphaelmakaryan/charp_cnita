@@ -8,7 +8,6 @@ namespace OutdoorNotebook.Core;
 public class EventService
 {
     readonly EventStorageService _eventStorageService = new EventStorageService();
-    static readonly HttpClient client = new HttpClient();
 
     /**
      * Fonction pour ressortir les sorties qui sont futures
