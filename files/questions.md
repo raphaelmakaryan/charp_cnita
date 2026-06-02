@@ -133,3 +133,7 @@
 - Car elle permet de faire les appels de manière asynchrone, donc elle ne bloque pas le programme en attendant la
   réponse de chaque appel, elle les fait tous en même temps, et attend la réponse de tous les appels en même temps, ce
   qui réduit le temps d'attente total
+
+21. Une méthode `async` utilise-t-elle toujours un nouveau thread (fil d'éxécution) ?
+- Non, une méthode async n'utilise pas forcément un nouveau thread, elle peut utiliser le même thread, mais elle
+  libère le thread pendant l'attente de la réponse, ce qui permet d'optimiser les ressources et d'éviter les blocages
