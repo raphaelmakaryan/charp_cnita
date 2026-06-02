@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OutdoorNotebook.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41570892a45e833016c6e3ba3c44ff35ed20930a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60b8e3a893e14f5c37fb021c4ac09b56dc133d54")]
 [assembly: System.Reflection.AssemblyProductAttribute("OutdoorNotebook.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OutdoorNotebook.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
