@@ -155,3 +155,9 @@
 
 - Car pour annuler une tâche, il faut que la tâche elle même vérifie si une demande d'annulation a été faite, et qu'elle
   accepte de s'arrêter, donc c'est une coopération entre la tâche et le code qui demande l'annulation
+
+25. Pourquoi est-il particulièrement intéressant d’utiliser `async` / `await` dans une API web ?
+
+- Car dans une API web, il y'a souvent des appels à des base de données, services tiers, etc... qui peuvent prendre du
+  temps, et l'utilisation d'async/await permet de ne pas bloquer le thread principal de l'application pendant l'attente
+  de ces appels
